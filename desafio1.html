@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACADEMIA-LETRAS</title>
     <link rel="stylesheet" href="CSS/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -136,28 +136,106 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="modalNovo" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+<div class="modal fade" id="modalNovo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
 
-                        <div class="modal-header">
-                            <h5 class="modal-title">Finalizar a Compra</h5>
-
-                            <button type="button"
-                                    class="btn-close"
-                                    data-bs-dismiss="modal">
-                            </button>
-                        </div>
-
-                        <div class="modal-body">
-
-                            <!-- conteúdo do seu novo modal -->
-
-                        </div>
-
-                    </div>
-                </div>
+            <div class="modal-header border-0 justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
+
+            <div class="modal-body px-4 pb-4">
+
+                <!-- Card do Plano -->
+                <div class="text-center p-4 rounded-4 border border-warning">
+
+                    <h2 class="fw-bold text-primary mb-1">Plano Fluência Premium</h2>
+
+                    <h1 class="fw-bold text-dark mb-0">
+                        R$ 79,90
+                        <span class="fs-5 text-secondary">/mês</span>
+                    </h1>
+
+                    <p class="text-muted small mb-4">
+                        Cancelamento quando quiser • Material incluso
+                    </p>
+
+                    <button class="btn btn-warning w-100 rounded-pill fw-bold py-2 mb-2">
+                        Começar Minha Jornada
+                    </button>
+
+                    <small class="text-secondary">
+                        Primeiro acesso imediato após a confirmação do cadastro.
+                    </small>
+
+                </div>
+
+                <!-- Benefícios -->
+                <div class="mt-4">
+
+                    <h5 class="fw-bold mb-3 text-center">
+                        O que está incluso no plano?
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Acesso completo às aulas do idioma escolhido.
+                        </li>
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Material didático digital disponível durante todo o curso.
+                        </li>
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Exercícios interativos de leitura, escrita, escuta e fala.
+                        </li>
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Aulas de conversação com professores especializados.
+                        </li>
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Certificado de conclusão ao finalizar o nível do curso.
+                        </li>
+
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Suporte para tirar dúvidas com a equipe de professores.
+                        </li>
+
+                        <li class="mb-1">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Acesso pelo computador, tablet ou celular.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Rodapé -->
+                <div class="text-center mt-4">
+
+                    <button class="btn btn-primary px-5 rounded-pill fw-bold">
+                        Finalizar Matrícula
+                    </button>
+
+                    <p class="text-muted small mt-3 mb-0">
+                        Ao prosseguir, sua matrícula será vinculada ao plano selecionado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
         </main>
 
@@ -182,5 +260,6 @@
     </div>
 
     <script src="JS/bootstrap.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

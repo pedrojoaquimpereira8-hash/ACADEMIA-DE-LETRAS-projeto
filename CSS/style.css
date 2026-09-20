@@ -1,5 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root {
+    --ddl-fundo: #FFF7F8;
+    --ddl-texto: #E73B52;
+    --ddl-rosa: #E73B52;
+    --ddl-fundo-secundario: #FFFFFF;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-linha: #c0c0c1;
+    --ddl-campo: #4A3639;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-label: #000;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-icon: #FFF;
+    /* Navbar */
+    --ddl-navbar: rgba(46, 42, 42, 0);
+    --ddl-navbar-scroll: rgba(255, 255, 255, 0.95);
+    --ddl-navbar-texto: #6d6d6d;
+    --ddl-navbar-texto-scroll: #4A3639;
+}
+
+[data-bs-theme="dark"] {
+    --ddl-fundo: #241B1D;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-texto: #F5E1E4;
+    --ddl-rosa: #E73B52;
+    --ddl-fundo-secundario: #302326;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-linha: #6B555A;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-campo: #FFF;
+    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
+    --ddl-label: #FFF;
+    --ddl-icon: #FFF;
+
+    /* Navbar */
+    --ddl-navbar: rgba(255, 255, 255, 0);
+    --ddl-navbar-scroll: rgba(51, 25, 31, 0.932);
+    --ddl-navbar-texto: #201a1a;
+    --ddl-navbar-texto-scroll: #F5E1E4;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Toast */
+.toast-container {
+    z-index: 9999;
+    bottom: 24px;
+    right: 24px;
+}
+
+.toast {
+    max-width: 420px;
+    padding: 8px;
+    border-radius: 18px;
+
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .20);
+    transition: all .25s ease;
+}
+
+#toastIcon {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.toast-body {
+    padding: 14px 16px;
+}
+
+.toast .btn-close {
+    transform: scale(1.15);
+}
+
+.toast-success {
+    background-color: #E73B52;
+}
+
+.toast-error {
+    background-color: #842029;
+}
+
+.toast-warning {
+    background-color: #F59E0B;
+    color: #2B1B00;
+}
+
+/* Modal */
+
+.campo-linha {
+    border: none;
+    border-bottom: 1px solid var(--ddl-linha);
+    border-radius: 0;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    transition: border-color 0.2s, border-width 0.2s;
+
+}
+
+.campo-linha:focus {
+    border-color: #000 !important;
+    border-bottom: 2px solid #000 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+#modalCadastro .modal-content,
+#modalNovo .modal-content {
+    background-color: var(--ddl-fundo-secundario);
+    border-radius: 10px;
+}
+
+#modalCadastro .modal-header,
+#modalNovo .modal-header {
+    background-color: #E73B52;
+    color: #FFF;
+    padding: 15px;
+}
+
+#modalCadastro .modal-title,
+#modalNovo .modal-title {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+
+#modalCadastro .modal-body,
+#modalNovo .modal-body {
+    padding: 30px;
+}
+
+#modalCadastro .form-label,
+#modalNovo .form-label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: var(--ddl-label);
+}
+
+#modalCadastro .campo-linha,
+#modalNovo .campo-linha {
+    color: var(--ddl-campo);
+    padding: 10px;
+}
+
+#modalCadastro .campo-linha:focus,
+#modalNovo .campo-linha:focus {
+    border-color: #E73B52 !important;
+    border-bottom: 2px solid #E73B52 !important;
+}
+
+#modalNovo #enviar,
+#modalCadastro #continuarNovo {
+    border: none;
+    transition: 0.2s;
+    color: #FFF;
+}
+
+#modalNovo #enviar:hover,
+#modalCadastro #continuarNovo:hover {
+    transform: translateY(-2px);
 }

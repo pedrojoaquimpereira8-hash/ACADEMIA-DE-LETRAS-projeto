@@ -100,9 +100,9 @@ const modalCadastroEl = document.getElementById("modalCadastro");
 const modalNovoEl = document.getElementById("modalNovo");
 const modalCadastro = bootstrap.Modal.getOrCreateInstance(modalCadastroEl);
 const modalNovo = bootstrap.Modal.getOrCreateInstance(modalNovoEl);
-
+let cadastroConcluido = false;
 const formCadastro = document.getElementById("formCadastro");
-
+const linksCursos = document.querySelectorAll("#c1, #c2, #c3, #c4");
 
 if (next) {
     next.addEventListener("click", () => {
@@ -120,6 +120,17 @@ if (next) {
             mostrarToast("Preencha todos os campos antes de continuar.", "warning");
             return;
         }
+
+        cadastroConcluido = true;
+        linksCursos.forEach(link => {
+            link.removeAttribute("data-bs-toggle");
+            link.removeAttribute("data-bs-target");
+
+            link.onclick = (e) => {
+                e.preventDefault();
+                modalNovo.show();
+            };
+        });        
 
         next.blur();
         modalCadastro.hide();
@@ -142,6 +153,8 @@ if (next) {
     });
 
 }
+
+
     
 //Toast//
 function mostrarToast(mensagem, tipo = "success") {
