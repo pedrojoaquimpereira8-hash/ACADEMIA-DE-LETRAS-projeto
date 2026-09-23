@@ -2,47 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-:root {
-    --ddl-fundo: #FFF7F8;
-    --ddl-texto: #E73B52;
-    --ddl-rosa: #E73B52;
-    --ddl-fundo-secundario: #FFFFFF;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-linha: #c0c0c1;
-    --ddl-campo: #4A3639;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-label: #000;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-icon: #FFF;
-    /* Navbar */
-    --ddl-navbar: rgba(46, 42, 42, 0);
-    --ddl-navbar-scroll: rgba(255, 255, 255, 0.95);
-    --ddl-navbar-texto: #6d6d6d;
-    --ddl-navbar-texto-scroll: #4A3639;
-}
-
-[data-bs-theme="dark"] {
-    --ddl-fundo: #241B1D;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-texto: #F5E1E4;
-    --ddl-rosa: #E73B52;
-    --ddl-fundo-secundario: #302326;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-linha: #6B555A;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-campo: #FFF;
-    /* EXEMPLO DE COR TROQUE DEPOIS POR FAVOR */
-    --ddl-label: #FFF;
-    --ddl-icon: #FFF;
-
-    /* Navbar */
-    --ddl-navbar: rgba(255, 255, 255, 0);
-    --ddl-navbar-scroll: rgba(51, 25, 31, 0.932);
-    --ddl-navbar-texto: #201a1a;
-    --ddl-navbar-texto-scroll: #F5E1E4;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -84,11 +43,11 @@
 }
 
 .toast-success {
-    background-color: #E73B52;
+    background-color: #13c20d;
 }
 
 .toast-error {
-    background-color: #842029;
+    background-color: #c01b29;
 }
 
 .toast-warning {
@@ -100,7 +59,7 @@
 
 .campo-linha {
     border: none;
-    border-bottom: 1px solid var(--ddl-linha);
+    border-bottom: 1px solid #c0c0c1;
     border-radius: 0;
     box-shadow: none !important;
     background-color: transparent !important;
@@ -115,17 +74,14 @@
     outline: none !important;
 }
 
-#modalCadastro .modal-content,
-#modalNovo .modal-content {
-    background-color: var(--ddl-fundo-secundario);
-    border-radius: 10px;
+#modalCadastro .modal-content{
+    background:#fff;
+    border-radius:10px;
 }
 
-#modalCadastro .modal-header,
-#modalNovo .modal-header {
-    background-color: #E73B52;
-    color: #FFF;
-    padding: 15px;
+#modalCadastro .modal-header{
+    background:#0d6efd;
+    color:white;
 }
 
 #modalCadastro .modal-title,
@@ -143,31 +99,138 @@
 #modalNovo .form-label {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    color: var(--ddl-label);
+    color: #000;
 }
 
 #modalCadastro .campo-linha,
 #modalNovo .campo-linha {
-    color: var(--ddl-campo);
+    color: #4A3639;
     padding: 10px;
 }
 
 #modalCadastro .campo-linha:focus,
 #modalNovo .campo-linha:focus {
-    border-color: #E73B52 !important;
-    border-bottom: 2px solid #E73B52 !important;
+    border-color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
 }
 
-#modalNovo #enviar,
-#modalCadastro #continuarNovo {
-    border: none;
-    transition: 0.2s;
-    color: #FFF;
+#planoModal{
+    background-color: #000 !important;
+    color: #fff !important;
+    border-radius: 20px;
+    border: 1px solid #303030;
 }
 
-#modalNovo #enviar:hover,
-#modalCadastro #continuarNovo:hover {
-    transform: translateY(-2px);
+#planoModal .modal-header,
+#planoModal .modal-body{
+    background-color: #000 !important;
+}
+
+#planoModal .btn-close{
+    filter: invert(1);
+}
+
+.titulo-plano{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.preco-plano{
+    font-size:2.8rem;
+    font-weight:800;
+    margin-bottom:0;
+}
+
+.btn-plano{
+    width:100%;
+    padding:12px;
+    border-radius:50px;
+    background:transparent;
+    border:2px solid;
+    color:white;
+    font-weight:700;
+    transition:.3s;
+}
+
+.texto-plano{
+    color: #BDBDBD !important;
+}
+
+.linha-plano{
+    border-color: #444 !important;
+}
+
+.beneficio{
+    color: #E8E8E8 !important;
+}
+
+.beneficio i{
+    margin-right: 10px;
+}
+
+.modal-ingles .titulo-plano,
+.modal-ingles .preco-plano,
+.modal-ingles .beneficio i{
+    color:#E53935;
+}
+
+.modal-ingles .btn-plano{
+    border-color:#E53935;
+    color:#E53935;
+}
+
+.modal-espanhol .titulo-plano,
+.modal-espanhol .preco-plano,
+.modal-espanhol .beneficio i{
+    color:#FFC107;
+}
+
+.modal-espanhol .btn-plano{
+    border-color:#FFC107;
+    color:#FFC107;
+}
+
+.modal-frances .titulo-plano,
+.modal-frances .preco-plano,
+.modal-frances .beneficio i{
+    color:#2979FF;
+}
+
+.modal-frances .btn-plano{
+    border-color:#2979FF;
+    color:#2979FF;
+}
+
+.modal-japones .titulo-plano,
+.modal-japones .preco-plano,
+.modal-japones .beneficio i{
+    color:#FFFFFF;
+}
+
+.modal-japones .btn-plano{
+    border-color:#FFFFFF;
+    color:#FFFFFF;
+}
+
+.modal-ingles .btn-plano:hover{
+    background:#E53935;
+    color:white;
+}
+
+.modal-espanhol .btn-plano:hover{
+    background:#FFC107;
+    color:black;
+}
+
+.modal-frances .btn-plano:hover{
+    background:#2979FF;
+    color:white;
+}
+
+.modal-japones .btn-plano:hover{
+    background:white;
+    color:black;
 }
 
 .containerQ2 {

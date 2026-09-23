@@ -104,6 +104,55 @@ const modalNovoEl = document.getElementById("modalNovo");
 let cadastroConcluido = false;
 const formCadastro = document.getElementById("formCadastro");
 const linksCursos = document.querySelectorAll("#c1, #c2, #c3, #c4");
+let cursoSelecionado = "";
+const btnFinalizar = document.getElementById("toastConcluir");
+
+if (btnFinalizar) {
+    btnFinalizar.addEventListener("click", () => {
+        modalNovo.hide(); // fecha o Modal 2
+        mostrarToast(
+            "Pedido realizado! Aguardando o devido pagamento.",
+            "success"
+        );
+    });
+}
+
+function atualizarModalCurso(link) {
+    cursoSelecionado = link.dataset.curso;
+    document.getElementById("nomeCurso").textContent = "Curso de " + cursoSelecionado;
+    document.getElementById("precoCurso").textContent = link.dataset.preco;
+
+    const planoModal = document.getElementById("planoModal");
+    // Remove qualquer cor antiga
+    planoModal.classList.remove(
+        "modal-ingles",
+        "modal-espanhol",
+        "modal-frances",
+        "modal-japones"
+    );
+    // Adiciona a cor do curso
+    switch (cursoSelecionado) {
+        case "Inglês":
+            planoModal.classList.add("modal-ingles");
+            break;
+        case "Espanhol":
+            planoModal.classList.add("modal-espanhol");
+            break;
+        case "Francês":
+            planoModal.classList.add("modal-frances");
+            break;
+        case "Japonês":
+            planoModal.classList.add("modal-japones");
+            break;
+    }
+
+}
+
+linksCursos.forEach(link => {
+    link.addEventListener("click", () => {
+        atualizarModalCurso(link);
+    });
+});
 
 if (next) {
     next.addEventListener("click", () => {
@@ -129,6 +178,7 @@ if (next) {
 
             link.onclick = (e) => {
                 e.preventDefault();
+                atualizarModalCurso(link);
                 modalNovo.show();
             };
         });
@@ -203,6 +253,7 @@ function mostrarToast(mensagem, tipo = "success") {
     );
 
     toast.show();
+
 };
 
 document.addEventListener("DOMContentLoaded", () => {
