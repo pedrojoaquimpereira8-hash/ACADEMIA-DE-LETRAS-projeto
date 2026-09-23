@@ -1,0 +1,154 @@
+<div class="modal fade" id="modalNovo" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;" id="planoModal">
+                        <div class="modal-header border-0 justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body px-4 pb-4">
+                            <!-- Card do Plano -->
+                            <div class="text-center p-4 rounded-4 border border-warning">
+                                <h2 class="fw-bold text-primary mb-1" id="nomeCurso">Plano Fluência Premium</h2>
+                                <h1 class="fw-bold text-dark mb-0" id="precoCurso">R$ 79,90<span class="fs-5 text-secondary">/mês</span></h1>
+                                <p class="text-muted small mb-4">
+                                    Cancelamento quando quiser • Material incluso
+                                </p>
+                                <button class="btn btn-warning w-100 rounded-pill fw-bold py-2 mb-2">
+                                    Começar Minha Jornada
+                                </button>
+                                <small class="text-secondary">
+                                    Primeiro acesso imediato após a confirmação do cadastro.
+                                </small>
+                            </div>
+                            <!-- Benefícios -->
+                            <div class="mt-4">
+                                <h5 class="fw-bold mb-3 text-center">
+                                    O que está incluso no plano?
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 beneficio">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        Aulas de conversação com professores especializados.
+                                    </li>
+                                    <li class="mb-3 beneficio">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        Exercícios para desenvolver suas habilidades
+                                    </li>
+                                    <li class="mb-3 beneficio">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        Certificado de conclusão ao finalizar o nível do curso.
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Rodapé -->
+                            <div class="text-center mt-4">
+                                <button class="btn btn-plano">
+                                    Finalizar Matrícula
+                                </button>
+                                <p class="text-muted small mt-3 mb-0">
+                                    Ao prosseguir, sua matrícula será vinculada ao plano selecionado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+/* ===== Modal dos planos ===== */
+
+#modalNovo .modal-content{
+    background: #000;
+    color: white;
+    border: 2px solid #444;
+    border-radius: 20px;
+}
+
+#modalNovo .btn-plano{
+    background: transparent;
+    border: 2px solid;
+    border-radius: 50px;
+    font-weight: bold;
+    width: 100%;
+    transition: .3s;
+}
+
+#modalNovo .beneficio i{
+    margin-right: 10px;
+}
+
+/* INGLÊS - Vermelho */
+.modal-ingles #nomeCurso,
+.modal-ingles #precoCurso,
+.modal-ingles .beneficio i{
+    color: #ff3b30;
+}
+
+.modal-ingles .btn-plano{
+    color: #ff3b30;
+    border-color: #ff3b30;
+}
+
+.modal-ingles .btn-plano:hover{
+    background: #ff3b30;
+    color: white;
+}
+
+/* ESPANHOL - Amarelo */
+.modal-espanhol #nomeCurso,
+.modal-espanhol #precoCurso,
+.modal-espanhol .beneficio i{
+    color: #ffc107;
+}
+
+.modal-espanhol .btn-plano{
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.modal-espanhol .btn-plano:hover{
+    background: #ffc107;
+    color: black;
+}
+
+/* FRANCÊS - Azul */
+.modal-frances #nomeCurso,
+.modal-frances #precoCurso,
+.modal-frances .beneficio i{
+    color: #2d7ff9;
+}
+
+.modal-frances .btn-plano{
+    color: #2d7ff9;
+    border-color: #2d7ff9;
+}
+
+.modal-frances .btn-plano:hover{
+    background: #2d7ff9;
+    color: white;
+}
+
+/* JAPONÊS - Branco */
+.modal-japones #nomeCurso,
+.modal-japones #precoCurso,
+.modal-japones .beneficio i{
+    color: #ffffff;
+}
+
+.modal-japones .btn-plano{
+    color: white;
+    border-color: white;
+}
+
+.modal-japones .btn-plano:hover{
+    background: white;
+    color: black;
+}
+
+
+
+
+
+
+
+

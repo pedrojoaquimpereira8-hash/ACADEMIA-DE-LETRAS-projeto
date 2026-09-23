@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">Academia Letras</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Curso: Fluência no Inglês</h5>
                             <p class="card-text">Aprender inglês pode parecer um desafio, mas conosco, você alcança fluência de maneira rápida e natural. Seja para se destacar no mercado de trabalho ou viajar com confiança, nosso método eficaz oferece todo o suporte necessário.</p>
-                            <a href="#" class="btn btn-primary" id="c1" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
+                            <a href="#" class="btn btn-primary" data-curso="Inglês" data-preco="R$ 89,90/mês" id="c1" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Curso: Fluência no Espanhol</h5>
                             <p class="card-text">Aprender espanhol abre as portas para um mundo cheio de cultura, história e novas possibilidades. Nosso curso de espanhol é pensado para oferecer uma experiência envolvente e prática, com foco na conversação desde o primeiro dia. </p>
-                            <a href="#" class="btn btn-primary" id="c2" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
+                            <a href="#" class="btn btn-primary" data-curso="Espanhol" data-preco="R$ 79,90/mês" id="c2" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Curso: Fluência no Francês</h5>
                             <p class="card-text">O francês não é apenas uma língua, é um patrimônio cultural vibrante, repleto de história e arte. Aprender francês na nossa Academia de Idiomas é embarcar em uma jornada que mistura tradição e inovação, permitindo que você se torne fluente e seguro para se expressar com a precisão única da língua.</p>
-                            <a href="#" class="btn btn-primary" id="c3" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
+                            <a href="#" class="btn btn-primary" data-curso="Francês" data-preco="R$ 64,90/mês" id="c3" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Curso: Fluência no Japonês</h5>
                             <p class="card-text">Nossa Academia oferece uma experiência completa de imersão na língua, cultura e história do Japão. Com foco em conversação e exercícios práticos, as aulas preparam os alunos para se expressarem com a exatidão e fluência características do idioma japonês.</p>
-                            <a href="#" class="btn btn-primary" id="c4" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
+                            <a href="#" class="btn btn-primary" data-curso="Japonês" data-preco="R$ 69,90/mês" id="c4" data-bs-toggle="modal" data-bs-target="#modalCadastro">Participe Aqui!</a>
                         </div>
                     </div>
                 </div>
@@ -136,111 +136,56 @@
                 </div>
             </div>
 
-<div class="modal fade" id="modalNovo" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
-
-            <div class="modal-header border-0 justify-content-end">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="modal fade" id="modalNovo" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" id="planoModal">
+                        <div class="modal-header border-0">
+                            <button type="button"
+                                    class="btn-close btn-close-white ms-auto"
+                                    data-bs-dismiss="modal">
+                            </button>
+                        </div>
+                        <div class="modal-body text-center px-4 pb-4">
+                            <h2 id="nomeCurso" class="titulo-plano">
+                                Curso de Inglês
+                            </h2>
+                            <h1 id="precoCurso" class="preco-plano">
+                                R$ 89,90/mês
+                            </h1>
+                            <p class="texto-plano">
+                                Acesso ilimitado ao curso escolhido • Material incluso
+                            </p>
+                            <button class="btn btn-plano mt-3 mb-4" id="toastConcluir">
+                                Finalizar Matrícula
+                            </button>
+                            <hr class="linha-plano">
+                            <div class="beneficios text-start mt-4">
+                                <p class="beneficio">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Aulas completas do idioma escolhido.
+                                </p>
+                                <p class="beneficio">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Material didático digital incluso.
+                                </p>
+                                <p class="beneficio">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Exercícios de conversação, leitura e escrita.
+                                </p>
+                                <p class="beneficio">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Professores especializados e certificado ao final.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="modal-body px-4 pb-4">
-
-                <!-- Card do Plano -->
-                <div class="text-center p-4 rounded-4 border border-warning">
-
-                    <h2 class="fw-bold text-primary mb-1">Plano Fluência Premium</h2>
-
-                    <h1 class="fw-bold text-dark mb-0">
-                        R$ 79,90
-                        <span class="fs-5 text-secondary">/mês</span>
-                    </h1>
-
-                    <p class="text-muted small mb-4">
-                        Cancelamento quando quiser • Material incluso
-                    </p>
-
-                    <button class="btn btn-warning w-100 rounded-pill fw-bold py-2 mb-2">
-                        Começar Minha Jornada
-                    </button>
-
-                    <small class="text-secondary">
-                        Primeiro acesso imediato após a confirmação do cadastro.
-                    </small>
-
-                </div>
-
-                <!-- Benefícios -->
-                <div class="mt-4">
-
-                    <h5 class="fw-bold mb-3 text-center">
-                        O que está incluso no plano?
-                    </h5>
-
-                    <ul class="list-unstyled">
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Acesso completo às aulas do idioma escolhido.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Material didático digital disponível durante todo o curso.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Exercícios interativos de leitura, escrita, escuta e fala.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Aulas de conversação com professores especializados.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Certificado de conclusão ao finalizar o nível do curso.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Suporte para tirar dúvidas com a equipe de professores.
-                        </li>
-
-                        <li class="mb-1">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>
-                            Acesso pelo computador, tablet ou celular.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Rodapé -->
-                <div class="text-center mt-4">
-
-                    <button class="btn btn-primary px-5 rounded-pill fw-bold">
-                        Finalizar Matrícula
-                    </button>
-
-                    <p class="text-muted small mt-3 mb-0">
-                        Ao prosseguir, sua matrícula será vinculada ao plano selecionado.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
 
         </main>
 
         <footer>
-            @Direitos Reservados a MJ Academia de Idiomas LTDA - 2026
+           © 2026 MJ Academia de Idiomas LTDA. Todos os direitos reservados.
         </footer>
 
     </div>
