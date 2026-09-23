@@ -43,168 +43,254 @@
                 </ul>
             </div>
         </nav>
-        <section class="container py-5">
+        <div class="main">
+            <section class="container py-5">
 
-            <div class="text-center mb-5">
-                <h2>Consulta de Notas</h2>
+                <div class="text-center mb-5">
+                    <h2>Consulta de Notas</h2>
 
-                <p class="text-muted">
-                    Selecione o curso e a turma para consultar as notas dos alunos.
-                </p>
-            </div>
-            <div class="card shadow-sm mb-4">
-
-                <div class="card-body">
-
-                    <div class="row g-3 align-items-end">
-
-                        <div class="col-md-5">
-
-                            <label for="curso" class="form-label">
-                                Curso
-                            </label>
-
-                            <select id="curso" class="form-select">
-
-                                <option selected>
-                                    Selecione um curso
-                                </option>
-
-                                <option value="ingles">
-                                    Inglês
-                                </option>
-
-                                <option value="espanhol">
-                                    Espanhol
-                                </option>
-
-                                <option value="japones">
-                                    Japonês
-                                </option>
-                                <option value="frances">
-                                    Francês
-                                </option>
-
-                            </select>
-
-                        </div>
-                        <div class="col-md-4">
-
-                            <label for="turma" class="form-label">
-                                Turma
-                            </label>
-
-                            <select id="turma" class="form-select">
-
-                                <option selected>
-                                    Selecione uma turma
-                                </option>
-
-                                <option value="A">
-                                    Turma A
-                                </option>
-
-                                <option value="B">
-                                    Turma B
-                                </option>
-
-                                <option value="C">
-                                    Turma C
-                                </option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-primary w-100" id="btnConsultar">
-                                Consultar notas
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="resultadoNotas">
-
-                <div class="text-center text-muted py-5">
-
-                    <p>
-                        Selecione um curso e uma turma para visualizar as notas.
+                    <p class="text-muted">
+                        Selecione o curso e a turma para consultar as notas dos alunos.
                     </p>
+                </div>
+                <div class="card shadow-sm mb-4">
 
+                    <div class="card-body">
+
+                        <div class="row g-3 align-items-end">
+
+                            <div class="col-md-5">
+
+                                <label for="curso" class="form-label">
+                                    Curso
+                                </label>
+
+                                <select id="curso" class="form-select">
+
+                                    <option selected>
+                                        Selecione um curso
+                                    </option>
+
+                                    <option value="ingles">
+                                        Inglês
+                                    </option>
+
+                                    <option value="espanhol">
+                                        Espanhol
+                                    </option>
+
+                                    <option value="japones">
+                                        Japonês
+                                    </option>
+                                    <option value="frances">
+                                        Francês
+                                    </option>
+
+                                </select>
+
+                            </div>
+                            <div class="col-md-4">
+
+                                <label for="turma" class="form-label">
+                                    Turma
+                                </label>
+
+                                <select id="turma" class="form-select">
+
+                                    <option selected>
+                                        Selecione uma turma
+                                    </option>
+
+                                    <option value="A">
+                                        Turma A
+                                    </option>
+
+                                    <option value="B">
+                                        Turma B
+                                    </option>
+
+                                    <option value="C">
+                                        Turma C
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary w-100" id="btnConsultar">
+                                    Consultar notas
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
+                <div id="resultadoNotas">
 
-        </section>
-        <div class="modal fade" id="modalEditarNota" tabindex="-1" aria-hidden="true">
-
-            <div class="modal-dialog modal-dialog-centered">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h5 class="modal-title">Editar notas</h5>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
+                    <div class="text-center text-muted py-5">
 
                         <p>
-                            Aluno:
-                            <strong id="nomeAlunoEditar"></strong>
+                            Selecione um curso e uma turma para visualizar as notas.
                         </p>
-
-                        <div class="mb-3">
-                            <label for="notaMarco" class="form-label">
-                                Março
-                            </label>
-
-                            <input type="number" id="notaMarco" class="form-control" min="0" max="10" step="0.1">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="notaAbril" class="form-label">
-                                Abril
-                            </label>
-
-                            <input type="number" id="notaAbril" class="form-control" min="0" max="10" step="0.1">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="notaMaio" class="form-label">
-                                Maio
-                            </label>
-
-                            <input type="number" id="notaMaio" class="form-control" min="0" max="10" step="0.1">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="notaJunho" class="form-label">
-                                Junho
-                            </label>
-
-                            <input type="number" id="notaJunho" class="form-control" min="0" max="10" step="0.1">
-                        </div>
 
                     </div>
 
-                    <div class="modal-footer">
+                </div>
 
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            Cancelar
-                        </button>
+            </section>
+            <div class="modal fade" id="modalEditarNota" tabindex="-1" aria-hidden="true">
 
-                        <button type="button" class="btn btn-primary" id="btnSalvarNota">
-                            Salvar alterações
-                        </button>
+                <div class="modal-dialog modal-dialog-centered">
+
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title">Editar notas</h5>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <p>
+                                Aluno:
+                                <strong id="nomeAlunoEditar"></strong>
+                            </p>
+
+                            <div class="mb-3">
+                                <label for="notaMarco" class="form-label">
+                                    Março
+                                </label>
+
+                                <input type="number" id="notaMarco" class="form-control" min="0" max="10" step="0.1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="notaAbril" class="form-label">
+                                    Abril
+                                </label>
+
+                                <input type="number" id="notaAbril" class="form-control" min="0" max="10" step="0.1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="notaMaio" class="form-label">
+                                    Maio
+                                </label>
+
+                                <input type="number" id="notaMaio" class="form-control" min="0" max="10" step="0.1">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="notaJunho" class="form-label">
+                                    Junho
+                                </label>
+
+                                <input type="number" id="notaJunho" class="form-control" min="0" max="10" step="0.1">
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+
+                            <button type="button" class="btn btn-primary" id="btnSalvarNota">
+                                Salvar alterações
+                            </button>
+
+                        </div>
 
                     </div>
 
                 </div>
 
             </div>
-
+            <hr>
+            <div class="ranking">
+                <h1>Ranking dos Alunos</h1>
+                <div class="ranking-container">
+                    <div class="cursoEspanhol">
+                        <h1>Espanhol</h1>
+                        <div class="ranking-item">
+                            <h2>1º Lugar</h2>
+                            <p>Nome do Aluno 1</p>
+                            <p>Nota: 9.5</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>2º Lugar</h2>
+                            <p>Nome do Aluno 2</p>
+                            <p>Nota: 9.0</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>3º Lugar</h2>
+                            <p>Nome do Aluno 3</p>
+                            <p>Nota: 8.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ranking-container">
+                    <div class="cursoEspanhol">
+                        <h1>Inglês</h1>
+                        <div class="ranking-item">
+                            <h2>1º Lugar</h2>
+                            <p>Nome do Aluno 1</p>
+                            <p>Nota: 9.5</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>2º Lugar</h2>
+                            <p>Nome do Aluno 2</p>
+                            <p>Nota: 9.0</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>3º Lugar</h2>
+                            <p>Nome do Aluno 3</p>
+                            <p>Nota: 8.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ranking-container">
+                    <div class="cursoEspanhol">
+                        <h1>Francês</h1>
+                        <div class="ranking-item">
+                            <h2>1º Lugar</h2>
+                            <p>Nome do Aluno 1</p>
+                            <p>Nota: 9.5</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>2º Lugar</h2>
+                            <p>Nome do Aluno 2</p>
+                            <p>Nota: 9.0</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>3º Lugar</h2>
+                            <p>Nome do Aluno 3</p>
+                            <p>Nota: 8.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ranking-container">
+                    <div class="cursoEspanhol">
+                        <h1>Japonês</h1>
+                        <div class="ranking-item">
+                            <h2>1º Lugar</h2>
+                            <p>Nome do Aluno 1</p>
+                            <p>Nota: 9.5</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>2º Lugar</h2>
+                            <p>Nome do Aluno 2</p>
+                            <p>Nota: 9.0</p>
+                        </div>
+                        <div class="ranking-item">
+                            <h2>3º Lugar</h2>
+                            <p>Nome do Aluno 3</p>
+                            <p>Nota: 8.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="JS/bootstrap.js"></script>

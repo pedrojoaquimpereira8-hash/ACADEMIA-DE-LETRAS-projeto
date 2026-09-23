@@ -74,14 +74,14 @@
     outline: none !important;
 }
 
-#modalCadastro .modal-content{
-    background:#fff;
-    border-radius:10px;
+#modalCadastro .modal-content {
+    background: #fff;
+    border-radius: 10px;
 }
 
-#modalCadastro .modal-header{
-    background:#0d6efd;
-    color:white;
+#modalCadastro .modal-header {
+    background: #0d6efd;
+    color: white;
 }
 
 #modalCadastro .modal-title,
@@ -114,7 +114,7 @@
     border-bottom: 2px solid #000000 !important;
 }
 
-#planoModal{
+#planoModal {
     background-color: #000 !important;
     color: #fff !important;
     border-radius: 20px;
@@ -122,115 +122,115 @@
 }
 
 #planoModal .modal-header,
-#planoModal .modal-body{
+#planoModal .modal-body {
     background-color: #000 !important;
 }
 
-#planoModal .btn-close{
+#planoModal .btn-close {
     filter: invert(1);
 }
 
-.titulo-plano{
-    font-size:2rem;
-    font-weight:700;
-    margin-bottom:10px;
+.titulo-plano {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.preco-plano{
-    font-size:2.8rem;
-    font-weight:800;
-    margin-bottom:0;
+.preco-plano {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0;
 }
 
-.btn-plano{
-    width:100%;
-    padding:12px;
-    border-radius:50px;
-    background:transparent;
-    border:2px solid;
-    color:white;
-    font-weight:700;
-    transition:.3s;
+.btn-plano {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid;
+    color: white;
+    font-weight: 700;
+    transition: .3s;
 }
 
-.texto-plano{
+.texto-plano {
     color: #BDBDBD !important;
 }
 
-.linha-plano{
+.linha-plano {
     border-color: #444 !important;
 }
 
-.beneficio{
+.beneficio {
     color: #E8E8E8 !important;
 }
 
-.beneficio i{
+.beneficio i {
     margin-right: 10px;
 }
 
 .modal-ingles .titulo-plano,
 .modal-ingles .preco-plano,
-.modal-ingles .beneficio i{
-    color:#E53935;
+.modal-ingles .beneficio i {
+    color: #E53935;
 }
 
-.modal-ingles .btn-plano{
-    border-color:#E53935;
-    color:#E53935;
+.modal-ingles .btn-plano {
+    border-color: #E53935;
+    color: #E53935;
 }
 
 .modal-espanhol .titulo-plano,
 .modal-espanhol .preco-plano,
-.modal-espanhol .beneficio i{
-    color:#FFC107;
+.modal-espanhol .beneficio i {
+    color: #FFC107;
 }
 
-.modal-espanhol .btn-plano{
-    border-color:#FFC107;
-    color:#FFC107;
+.modal-espanhol .btn-plano {
+    border-color: #FFC107;
+    color: #FFC107;
 }
 
 .modal-frances .titulo-plano,
 .modal-frances .preco-plano,
-.modal-frances .beneficio i{
-    color:#2979FF;
+.modal-frances .beneficio i {
+    color: #2979FF;
 }
 
-.modal-frances .btn-plano{
-    border-color:#2979FF;
-    color:#2979FF;
+.modal-frances .btn-plano {
+    border-color: #2979FF;
+    color: #2979FF;
 }
 
 .modal-japones .titulo-plano,
 .modal-japones .preco-plano,
-.modal-japones .beneficio i{
-    color:#FFFFFF;
+.modal-japones .beneficio i {
+    color: #FFFFFF;
 }
 
-.modal-japones .btn-plano{
-    border-color:#FFFFFF;
-    color:#FFFFFF;
+.modal-japones .btn-plano {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
-.modal-ingles .btn-plano:hover{
-    background:#E53935;
-    color:white;
+.modal-ingles .btn-plano:hover {
+    background: #E53935;
+    color: white;
 }
 
-.modal-espanhol .btn-plano:hover{
-    background:#FFC107;
-    color:black;
+.modal-espanhol .btn-plano:hover {
+    background: #FFC107;
+    color: black;
 }
 
-.modal-frances .btn-plano:hover{
-    background:#2979FF;
-    color:white;
+.modal-frances .btn-plano:hover {
+    background: #2979FF;
+    color: white;
 }
 
-.modal-japones .btn-plano:hover{
-    background:white;
-    color:black;
+.modal-japones .btn-plano:hover {
+    background: white;
+    color: black;
 }
 
 .containerQ2 {
@@ -249,4 +249,21 @@
     justify-content: center;
     width: 70%;
     margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ranking {
+    align-items: center;
+}
+
+.ranking-container {
+    display: flex;
+    flex-direction: row;
 }

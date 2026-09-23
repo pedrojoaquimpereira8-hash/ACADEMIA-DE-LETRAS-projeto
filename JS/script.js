@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
                 { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
-                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Gabriel S.C.S", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
             ]
         },
@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
                 { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
-                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Gabriel S.C.S", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
             ],
 
@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
                 { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
-                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Gabriel S.C.S", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
             ],
 
@@ -434,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
                 { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
-                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Gabriel S.C.S", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
             ]
         }
