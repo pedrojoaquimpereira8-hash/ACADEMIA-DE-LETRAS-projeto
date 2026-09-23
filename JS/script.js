@@ -96,20 +96,26 @@ if (fone) {
 
 }
 
-const next = document.getElementById("continuar");
 const modalCadastroEl = document.getElementById("modalCadastro");
 const modalNovoEl = document.getElementById("modalNovo");
-//const modalCadastro = bootstrap.Modal.getOrCreateInstance(modalCadastroEl);
-//const modalNovo = bootstrap.Modal.getOrCreateInstance(modalNovoEl);
+
+const modalCadastro = modalCadastroEl
+    ? bootstrap.Modal.getOrCreateInstance(modalCadastroEl)
+    : null;
+
+const modalNovo = modalNovoEl
+    ? bootstrap.Modal.getOrCreateInstance(modalNovoEl)
+    : null;
 let cadastroConcluido = false;
 const formCadastro = document.getElementById("formCadastro");
 const linksCursos = document.querySelectorAll("#c1, #c2, #c3, #c4");
 let cursoSelecionado = "";
 const btnFinalizar = document.getElementById("toastConcluir");
 
-if (btnFinalizar) {
+if (btnFinalizar && modalNovo) {
     btnFinalizar.addEventListener("click", () => {
-        modalNovo.hide(); // fecha o Modal 2
+        modalNovo.hide();
+
         mostrarToast(
             "Pedido realizado! Aguardando o devido pagamento.",
             "success"
@@ -123,14 +129,12 @@ function atualizarModalCurso(link) {
     document.getElementById("precoCurso").textContent = link.dataset.preco;
 
     const planoModal = document.getElementById("planoModal");
-    // Remove qualquer cor antiga
     planoModal.classList.remove(
         "modal-ingles",
         "modal-espanhol",
         "modal-frances",
         "modal-japones"
     );
-    // Adiciona a cor do curso
     switch (cursoSelecionado) {
         case "Inglês":
             planoModal.classList.add("modal-ingles");
@@ -154,7 +158,9 @@ linksCursos.forEach(link => {
     });
 });
 
-if (next) {
+const next = document.getElementById("continuar");
+
+if (next && modalCadastro && modalNovo && modalCadastroEl && modalNovoEl) {
     next.addEventListener("click", () => {
         if (!validarNome()) {
             return;
@@ -475,6 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <th>Maio</th>
                             <th>Junho</th>
                             <th>Média</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
 
