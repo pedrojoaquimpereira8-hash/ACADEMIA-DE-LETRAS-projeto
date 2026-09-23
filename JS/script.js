@@ -396,6 +396,47 @@ document.addEventListener("DOMContentLoaded", () => {
                 { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
                 { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
             ]
+        },
+
+        frances: {
+            A: [
+                { nome: "Ana Silva", notas: [8.5, 7.5, 9.0, 8.0] },
+                { nome: "Bruno Santos", notas: [7.0, 8.0, 7.5, 9.0] },
+                { nome: "Carlos Oliveira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Daniel Souza", notas: [7.5, 8.0, 8.5, 7.0] },
+                { nome: "Eduarda Lima", notas: [9.0, 9.5, 8.0, 9.0] },
+                { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
+            ],
+
+            B: [
+                { nome: "Ana Silva", notas: [8.5, 7.5, 9.0, 8.0] },
+                { nome: "Bruno Santos", notas: [7.0, 8.0, 7.5, 9.0] },
+                { nome: "Carlos Oliveira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Daniel Souza", notas: [7.5, 8.0, 8.5, 7.0] },
+                { nome: "Eduarda Lima", notas: [9.0, 9.5, 8.0, 9.0] },
+                { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
+            ],
+
+            C: [
+                { nome: "Ana Silva", notas: [8.5, 7.5, 9.0, 8.0] },
+                { nome: "Bruno Santos", notas: [7.0, 8.0, 7.5, 9.0] },
+                { nome: "Carlos Oliveira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Daniel Souza", notas: [7.5, 8.0, 8.5, 7.0] },
+                { nome: "Eduarda Lima", notas: [9.0, 9.5, 8.0, 9.0] },
+                { nome: "Felipe Costa", notas: [6.5, 7.0, 8.0, 7.5] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "João Pereira", notas: [9.0, 8.5, 9.5, 9.0] },
+                { nome: "Gabriel Alves", notas: [8.0, 8.5, 9.0, 8.5] },
+                { nome: "Helena Martins", notas: [9.0, 9.0, 8.5, 9.5] }
+            ]
         }
     };
 
