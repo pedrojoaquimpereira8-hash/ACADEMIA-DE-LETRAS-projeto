@@ -393,6 +393,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    const modalEditarNota = new bootstrap.Modal(
+        document.getElementById("modalEditarNota")
+    );
+
+    const nomeAlunoEditar = document.getElementById("nomeAlunoEditar");
+
+    const notaMarco = document.getElementById("notaMarco");
+    const notaAbril = document.getElementById("notaAbril");
+    const notaMaio = document.getElementById("notaMaio");
+    const notaJunho = document.getElementById("notaJunho");
+
+    const btnSalvarNota = document.getElementById("btnSalvarNota");
+
+    let alunoEditando = null;
+
 
     function consultarNotas() {
 
@@ -520,7 +535,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ${tabela}
         `;
+        const botoesEditar = document.querySelectorAll(".btn-editar");
+
+        botoesEditar.forEach(function (botao) {
+
+            botao.addEventListener("click", function () {
+
+                const index = Number(botao.dataset.index);
+
+                alunoEditando = listaAlunos[index];
+
+                nomeAlunoEditar.textContent = alunoEditando.nome;
+
+                notaMarco.value = alunoEditando.notas[0];
+                notaAbril.value = alunoEditando.notas[1];
+                notaMaio.value = alunoEditando.notas[2];
+                notaJunho.value = alunoEditando.notas[3];
+
+                modalEditarNota.show();
+
+            });
+
+        });
     }
+
+
+    btnSalvarNota.addEventListener("click", function () {
+
+        if (!alunoEditando) return;
+
+        alunoEditando.notas[0] = Number(notaMarco.value);
+        alunoEditando.notas[1] = Number(notaAbril.value);
+        alunoEditando.notas[2] = Number(notaMaio.value);
+        alunoEditando.notas[3] = Number(notaJunho.value);
+
+        modalEditarNota.hide();
+
+        consultarNotas();
+
+    });
+
+
+
 
     btnConsultar.addEventListener("click", consultarNotas);
 
