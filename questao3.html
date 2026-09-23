@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Painel</title>
+</head>
+<body>
+<div class="container-fluid containerQ2">
+
+    <!-- NAVBAR (igual a de vocês) -->
+    <nav class="navbar navbarQ2 navbar-expand bg-body-tertiary">
+        <a class="navbar-brand" href="#">logo</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbarQ2 me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Professores</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Contato</a></li>
+            </ul>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar">
+                <button class="btn btn-outline-success">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+
+        <div class="text-center mb-4">
+            <h2>Painel Administrativo</h2>
+            <p class="text-muted">
+                Gerencie as notas e a frequência dos alunos da Academia Letras.
+            </p>
+        </div>
+
+        <!-- ABAS -->
+        <ul class="nav nav-tabs mb-4 justify-content-center" id="painelTabs" role="tablist">
+
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="notas-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#abaNotas"
+                    type="button">
+                    📘 Controle de Notas
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="frequencia-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#abaFrequencia"
+                    type="button">
+                    📅 Controle de Frequência
+                </button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- ================= NOTAS ================= -->
+
+            <div class="tab-pane fade show active" id="abaNotas">
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+
+                        <div class="row g-3 align-items-end">
+
+                            <div class="col-md-5">
+                                <label class="form-label">Curso</label>
+
+                                <select id="curso" class="form-select">
+                                    <option value="" selected>Selecione um curso</option>
+                                    <option value="ingles">Inglês</option>
+                                    <option value="espanhol">Espanhol</option>
+                                    <option value="japones">Japonês</option>
+                                    <option value="frances">Francês</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Turma</label>
+
+                                <select id="turma" class="form-select">
+                                    <option value="" selected>Selecione uma turma</option>
+                                    <option value="A">Turma A</option>
+                                    <option value="B">Turma B</option>
+                                    <option value="C">Turma C</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <button
+                                    type="button"
+                                    class="btn btn-primary w-100"
+                                    id="btnConsultar">
+                                    Consultar Notas
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="resultadoNotas">
+
+                    <div class="text-center text-muted py-5">
+                        Selecione um curso e uma turma para visualizar as notas.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= FREQUÊNCIA ================= -->
+
+            <div class="tab-pane fade" id="abaFrequencia">
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+
+                        <div class="row g-3 align-items-end">
+
+                            <div class="col-md-5">
+
+                                <label class="form-label">Curso</label>
+
+                                <select id="cursoFreq" class="form-select">
+                                    <option value="" selected>Selecione um curso</option>
+                                    <option value="ingles">Inglês</option>
+                                    <option value="espanhol">Espanhol</option>
+                                    <option value="japones">Japonês</option>
+                                    <option value="frances">Francês</option>
+                                </select>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <label class="form-label">Turma</label>
+
+                                <select id="turmaFreq" class="form-select">
+                                    <option value="" selected>Selecione uma turma</option>
+                                    <option value="A">Turma A</option>
+                                    <option value="B">Turma B</option>
+                                    <option value="C">Turma C</option>
+                                </select>
+
+                            </div>
+
+                            <div class="col-md-3">
+
+                                <button
+                                    type="button"
+                                    class="btn btn-success w-100"
+                                    id="btnConsultarFreq">
+
+                                    Consultar Frequência
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="resultadoFrequencia">
+
+                    <div class="text-center text-muted py-5">
+                        Selecione um curso e uma turma para visualizar a frequência.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MODAL DAS NOTAS -->
+
+    <div class="modal fade" id="modalEditarNota" tabindex="-1">
+
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar notas</h5>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>
+                            Aluno:
+                            <strong id="nomeAlunoEditar"></strong>
+                        </p>
+
+                        <div class="mb-3">
+                            <label for="notaMarco" class="form-label">
+                                Março
+                            </label>
+
+                            <input type="number" id="notaMarco" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaAbril" class="form-label">
+                                Abril
+                            </label>
+
+                            <input type="number" id="notaAbril" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaMaio" class="form-label">
+                                Maio
+                            </label>
+
+                            <input type="number" id="notaMaio" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaJunho" class="form-label">
+                                Junho
+                            </label>
+
+                            <input type="number" id="notaJunho" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+
+                        <button type="button" class="btn btn-primary" id="btnSalvarNota">
+                            Salvar alterações
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+
+    <!-- MODAL DA FREQUÊNCIA -->
+
+    <div class="modal fade" id="modalEditarFreq" tabindex="-1">
+
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Editar Frequência
+                        </h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Aluno:
+                            <strong id="nomeAlunoFreq"></strong>
+                        </p>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Presenças
+                            </label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="presencasAluno"
+                                min="0"
+                                max="80">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Faltas
+                            </label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="faltasAluno"
+                                min="0"
+                                max="80">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button class="btn btn-primary"
+                                id="btnSalvarFreq">
+                            Salvar Alterações
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+</div>
+
+<script src="JS/bootstrap.js"></script>
+<script src="JS/script.js"></script>
+</body>
+</html>
