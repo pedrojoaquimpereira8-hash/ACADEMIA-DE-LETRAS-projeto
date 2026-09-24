@@ -147,8 +147,121 @@
 
 
 
+            <div class="modal-dialog modal-dialog-centered">
 
+                <div class="modal-content">
 
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar notas</h5>
 
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>
+                            Aluno:
+                            <strong id="nomeAlunoEditar"></strong>
+                        </p>
+
+                        <div class="mb-3">
+                            <label for="notaMarco" class="form-label">
+                                Março
+                            </label>
+
+                            <input type="number" id="notaMarco" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaAbril" class="form-label">
+                                Abril
+                            </label>
+
+                            <input type="number" id="notaAbril" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaMaio" class="form-label">
+                                Maio
+                            </label>
+
+                            <input type="number" id="notaMaio" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notaJunho" class="form-label">
+                                Junho
+                            </label>
+
+                            <input type="number" id="notaJunho" class="form-control" min="0" max="10" step="0.1">
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+
+                        <button type="button" class="btn btn-primary" id="btnSalvarNota">
+                            Salvar alterações
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Editar Frequência
+                        </h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Aluno:
+                            <strong id="nomeAlunoFreq"></strong>
+                        </p>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Presenças
+                            </label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="presencasAluno"
+                                min="0"
+                                max="80">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Faltas
+                            </label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="faltasAluno"
+                                min="0"
+                                max="80">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button class="btn btn-primary"
+                                id="btnSalvarFreq">
+                            Salvar Alterações
+                        </button>
+                    </div>
+                </div>
+            </div>
 
 
