@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,200 +8,186 @@
     <link rel="stylesheet" href="CSS/style.css">
     <title>Painel</title>
 </head>
+
 <body>
-<div class="container-fluid containerQ2">
+    <div class="container-fluid containerQ2">
 
-    <!-- NAVBAR (igual a de vocês) -->
-    <nav class="navbar navbarQ2 navbar-expand bg-body-tertiary">
-        <a class="navbar-brand" href="#">logo</a>
+        <!-- NAVBAR (igual a de vocês) -->
+        <nav class="navbar navbarQ2 navbar-expand bg-body-tertiary">
+            <a class="navbar-brand" href="#">logo</a>
 
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav navbarQ2 me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Professores</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Contato</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbarQ2 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Professores</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contato</a></li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar">
+                    <button class="btn btn-outline-success">Pesquisar</button>
+                </form>
+            </div>
+        </nav>
+
+        <section class="container py-5">
+
+            <div class="text-center mb-4">
+                <h2>Painel Administrativo</h2>
+                <p class="text-muted">
+                    Gerencie as notas e a frequência dos alunos da Academia Letras.
+                </p>
+            </div>
+
+            <!-- ABAS -->
+            <ul class="nav nav-tabs mb-4 justify-content-center" id="painelTabs" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="notas-tab" data-bs-toggle="tab" data-bs-target="#abaNotas"
+                        type="button">
+                        📘 Controle de Notas
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="frequencia-tab" data-bs-toggle="tab" data-bs-target="#abaFrequencia"
+                        type="button">
+                        📅 Controle de Frequência
+                    </button>
+                </li>
+
             </ul>
 
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Pesquisar">
-                <button class="btn btn-outline-success">Pesquisar</button>
-            </form>
-        </div>
-    </nav>
+            <div class="tab-content">
 
-    <section class="container py-5">
+                <!-- ================= NOTAS ================= -->
 
-        <div class="text-center mb-4">
-            <h2>Painel Administrativo</h2>
-            <p class="text-muted">
-                Gerencie as notas e a frequência dos alunos da Academia Letras.
-            </p>
-        </div>
+                <div class="tab-pane fade show active" id="abaNotas">
 
-        <!-- ABAS -->
-        <ul class="nav nav-tabs mb-4 justify-content-center" id="painelTabs" role="tablist">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
 
-            <li class="nav-item" role="presentation">
-                <button
-                    class="nav-link active"
-                    id="notas-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#abaNotas"
-                    type="button">
-                    📘 Controle de Notas
-                </button>
-            </li>
+                            <div class="row g-3 align-items-end">
 
-            <li class="nav-item" role="presentation">
-                <button
-                    class="nav-link"
-                    id="frequencia-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#abaFrequencia"
-                    type="button">
-                    📅 Controle de Frequência
-                </button>
-            </li>
+                                <div class="col-md-5">
+                                    <label class="form-label">Curso</label>
 
-        </ul>
+                                    <select id="curso" class="form-select">
+                                        <option value="" selected>Selecione um curso</option>
+                                        <option value="ingles">Inglês</option>
+                                        <option value="espanhol">Espanhol</option>
+                                        <option value="japones">Japonês</option>
+                                        <option value="frances">Francês</option>
+                                    </select>
+                                </div>
 
-        <div class="tab-content">
+                                <div class="col-md-4">
+                                    <label class="form-label">Turma</label>
 
-            <!-- ================= NOTAS ================= -->
+                                    <select id="turma" class="form-select">
+                                        <option value="" selected>Selecione uma turma</option>
+                                        <option value="A">Turma A</option>
+                                        <option value="B">Turma B</option>
+                                        <option value="C">Turma C</option>
+                                    </select>
+                                </div>
 
-            <div class="tab-pane fade show active" id="abaNotas">
+                                <div class="col-md-3">
+                                    <button type="button" class="btn btn-primary w-100" id="btnConsultar">
+                                        Consultar Notas
+                                    </button>
+                                </div>
 
-                <div class="card shadow-sm mb-4">
-                    <div class="card-body">
-
-                        <div class="row g-3 align-items-end">
-
-                            <div class="col-md-5">
-                                <label class="form-label">Curso</label>
-
-                                <select id="curso" class="form-select">
-                                    <option value="" selected>Selecione um curso</option>
-                                    <option value="ingles">Inglês</option>
-                                    <option value="espanhol">Espanhol</option>
-                                    <option value="japones">Japonês</option>
-                                    <option value="frances">Francês</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label class="form-label">Turma</label>
-
-                                <select id="turma" class="form-select">
-                                    <option value="" selected>Selecione uma turma</option>
-                                    <option value="A">Turma A</option>
-                                    <option value="B">Turma B</option>
-                                    <option value="C">Turma C</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-3">
-                                <button
-                                    type="button"
-                                    class="btn btn-primary w-100"
-                                    id="btnConsultar">
-                                    Consultar Notas
-                                </button>
                             </div>
 
                         </div>
+                    </div>
+
+                    <div id="resultadoNotas">
+
+                        <div class="text-center text-muted py-5">
+                            Selecione um curso e uma turma para visualizar as notas.
+                        </div>
 
                     </div>
+
                 </div>
 
-                <div id="resultadoNotas">
+                <!-- ================= FREQUÊNCIA ================= -->
 
-                    <div class="text-center text-muted py-5">
-                        Selecione um curso e uma turma para visualizar as notas.
+                <div class="tab-pane fade" id="abaFrequencia">
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+
+                            <div class="row g-3 align-items-end">
+
+                                <div class="col-md-5">
+
+                                    <label class="form-label">Curso</label>
+
+                                    <select id="cursoFreq" class="form-select">
+                                        <option value="" selected>Selecione um curso</option>
+                                        <option value="ingles">Inglês</option>
+                                        <option value="espanhol">Espanhol</option>
+                                        <option value="japones">Japonês</option>
+                                        <option value="frances">Francês</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <label class="form-label">Turma</label>
+
+                                    <select id="turmaFreq" class="form-select">
+                                        <option value="" selected>Selecione uma turma</option>
+                                        <option value="A">Turma A</option>
+                                        <option value="B">Turma B</option>
+                                        <option value="C">Turma C</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <button type="button" class="btn btn-success w-100" id="btnConsultarFreq">
+
+                                        Consultar Frequência
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="resultadoFrequencia">
+
+                        <div class="text-center text-muted py-5">
+                            Selecione um curso e uma turma para visualizar a frequência.
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-            <!-- ================= FREQUÊNCIA ================= -->
+        </section>
 
-            <div class="tab-pane fade" id="abaFrequencia">
+        <!-- MODAL DAS NOTAS -->
 
-                <div class="card shadow-sm mb-4">
-                    <div class="card-body">
-
-                        <div class="row g-3 align-items-end">
-
-                            <div class="col-md-5">
-
-                                <label class="form-label">Curso</label>
-
-                                <select id="cursoFreq" class="form-select">
-                                    <option value="" selected>Selecione um curso</option>
-                                    <option value="ingles">Inglês</option>
-                                    <option value="espanhol">Espanhol</option>
-                                    <option value="japones">Japonês</option>
-                                    <option value="frances">Francês</option>
-                                </select>
-
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <label class="form-label">Turma</label>
-
-                                <select id="turmaFreq" class="form-select">
-                                    <option value="" selected>Selecione uma turma</option>
-                                    <option value="A">Turma A</option>
-                                    <option value="B">Turma B</option>
-                                    <option value="C">Turma C</option>
-                                </select>
-
-                            </div>
-
-                            <div class="col-md-3">
-
-                                <button
-                                    type="button"
-                                    class="btn btn-success w-100"
-                                    id="btnConsultarFreq">
-
-                                    Consultar Frequência
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div id="resultadoFrequencia">
-
-                    <div class="text-center text-muted py-5">
-                        Selecione um curso e uma turma para visualizar a frequência.
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- MODAL DAS NOTAS -->
-
-    <div class="modal fade" id="modalEditarNota" tabindex="-1">
+        <div class="modal fade" id="modalEditarNota" tabindex="-1">
 
             <div class="modal-dialog modal-dialog-centered">
 
@@ -270,11 +257,11 @@
 
             </div>
 
-    </div>
+        </div>
 
-    <!-- MODAL DA FREQUÊNCIA -->
+        <!-- MODAL DA FREQUÊNCIA -->
 
-    <div class="modal fade" id="modalEditarFreq" tabindex="-1">
+        <div class="modal fade" id="modalEditarFreq" tabindex="-1">
 
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -293,43 +280,33 @@
                             <label class="form-label">
                                 Presenças
                             </label>
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="presencasAluno"
-                                min="0"
-                                max="80">
+                            <input type="number" class="form-control" id="presencasAluno" min="0" max="80">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">
                                 Faltas
                             </label>
-                            <input
-                                type="number"
-                                class="form-control"
-                                id="faltasAluno"
-                                min="0"
-                                max="80">
+                            <input type="number" class="form-control" id="faltasAluno" min="0" max="80">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary"
-                                data-bs-dismiss="modal">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">
                             Cancelar
                         </button>
-                        <button class="btn btn-primary"
-                                id="btnSalvarFreq">
+                        <button class="btn btn-primary" id="btnSalvarFreq">
                             Salvar Alterações
                         </button>
                     </div>
                 </div>
             </div>
 
+        </div>
+
     </div>
 
-</div>
-
-<script src="JS/bootstrap.js"></script>
-<script src="JS/script.js"></script>
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/script2.js"></script>
 </body>
+
 </html>
