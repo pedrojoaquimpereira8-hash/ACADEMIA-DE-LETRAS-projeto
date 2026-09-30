@@ -5,86 +5,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACADEMIA-LETRAS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Cursos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Professores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Contato</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Academia Letras</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Professores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-success" type="submit">
+                        Pesquisar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container mt-5">
+            <h1 class="text-center mb-5">
+                Conheça nossos Planos:
+            </h1>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Curso: Fluência no Inglês
+                            </h5>
+                            <p class="card-text">
+                                Aprender inglês pode parecer um desafio, mas conosco, você alcança
+                                fluência de maneira rápida e natural. Seja para se destacar no
+                                mercado de trabalho ou viajar com confiança, nosso método eficaz
+                                oferece todo o suporte necessário.
+                            </p>
+                            <button
+                                class="btn btn-primary btn-curso"
+                                data-curso="Inglês"
+                                data-preco="R$ 89,90/mês"
+                                id="c1"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCurso">
+                                Participe Aqui!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Curso: Fluência no Espanhol
+                            </h5>
+                            <p class="card-text">
+                                Aprender espanhol abre as portas para um mundo cheio de cultura,
+                                história e novas possibilidades. Nosso curso de espanhol é pensado
+                                para oferecer uma experiência envolvente e prática, com foco na
+                                conversação desde o primeiro dia.
+                            </p>
+                            <button
+                                class="btn btn-primary btn-curso"
+                                data-curso="Espanhol"
+                                data-preco="R$ 79,90/mês"
+                                id="c2"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCurso">
+                                Participe Aqui!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Curso: Fluência no Francês
+                            </h5>
+                            <p class="card-text">
+                                O francês não é apenas uma língua, é um patrimônio cultural vibrante,
+                                repleto de história e arte. Aprender francês na nossa Academia de
+                                Idiomas é embarcar em uma jornada que mistura tradição e inovação,
+                                permitindo que você se torne fluente e seguro para se expressar com
+                                a precisão única da língua.
+                            </p>
+                            <button
+                                class="btn btn-primary btn-curso"
+                                data-curso="Francês"
+                                data-preco="R$ 64,90/mês"
+                                id="c3"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCurso">
+                                Participe Aqui!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Curso: Fluência no Japonês
+                            </h5>
+                            <p class="card-text">
+                                Nossa Academia oferece uma experiência completa de imersão na
+                                língua, cultura e história do Japão. Com foco em conversação e
+                                exercícios práticos, as aulas preparam os alunos para se expressarem
+                                com a exatidão e fluência características do idioma japonês.
+                            </p>
+                            <button
+                                class="btn btn-primary btn-curso"
+                                data-curso="Japonês"
+                                data-preco="R$ 69,90/mês"
+                                id="c4"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalCurso">
+                                Participe Aqui!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MODAL 1 - INFORMAÇÕES DO CURSO -->
+    <div class="modal fade" id="modalCurso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" id="planoModal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center px-4 pb-4">
+                    <h2 id="nomeCurso" class="titulo-plano">Curso de Inglês</h2>
+                    <h1 id="precoCurso" class="preco-plano">R$ 89,90/mês</h1>
+                    <p class="texto-plano">Acesso ilimitado ao curso escolhido • Material incluso</p>
+                    <button type="button" class="btn btn-plano mt-3 mb-4" id="btnFazerMatricula">Fazer Matrícula</button>
+                    <hr class="linha-plano">
+                    <div class="beneficios text-start mt-4">
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Aulas completas do idioma escolhido.</p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Material didático digital incluso.</p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Exercícios de conversação, leitura e escrita.</p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Professores especializados e certificado ao final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCadastro" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastrar cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCadastroFinal" autocomplete="off">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control campo-linha" name="nomeAluno" id="nomeAluno">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">CPF</label>
+                            <input type="text" class="form-control campo-linha" name="cpfAluno" id="cpfAluno" maxlength="14">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">E-mail</label>
+                            <input type="email" class="form-control campo-linha" id="emailAluno" name="emailAluno">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Telefone</label>
+                            <input type="tel" class="form-control campo-linha" name="telefoneAluno" id="telefoneAluno" maxlength="15">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Curso</label>
+                            <input type="text" class="form-control campo-linha" id="cursoAluno" name="cursoAluno" readonly>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success" id="finalizarCadastro">Finalizar Cadastro</button>
+                        </div>
                     </form>
                 </div>
             </div>
-        </nav>
-        <main>
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col">
-                    <h1>Controle de Notas</h1>
-                    <p>Gerencie as notas dos seus alunos de forma eficiente e organizada.</p>
-                    <button type="button" onclick="window.location.href='questao2.html'"
-                        class="btn btn-primary">Conferir</button>
-                </div>
-            </div>
-        </main>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
+    <!-- FOOTER -->
+    <footer class="text-center mt-5 mb-3">
+        © 2026 MJ Academia de Idiomas LTDA.
+        Todos os direitos reservados.
+    </footer>
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+        <div id="toastDonna" class="toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex align-items-center p-2">
+                <i id="toastIcon" class="bi fs-3 me-3"></i>
+                <div class="flex-grow-1">
+                    <div id="toastTitle" class="fw-bold"></div>
+                    <div id="toastBody"></div>
+                </div>
+                <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>
