@@ -270,3 +270,23 @@ function mostrarToast(mensagem, tipo = "success") {
 
     toast.show();
 }
+
+// Ranking //
+function calcularMedia(notas) {
+    return (notas.marcoAbril + notas.maioJunho + notas.agostoSetembro + notas.outubroNovembro) / 4;
+}
+
+function gerarRanking(curso) {
+    const alunos = carregarAlunos();
+
+    const alunosCurso = alunos.filter(aluno => aluno.curso === curso);
+
+    alunosCurso.forEach(aluno => {
+        aluno.media = calcularMedia(aluno.notas);
+    });
+
+    alunosCurso.sort((a, b) => b.media - a.media);
+
+    return alunosCurso.slice(0, 3);
+}
+
