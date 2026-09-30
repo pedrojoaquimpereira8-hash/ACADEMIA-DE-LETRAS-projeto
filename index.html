@@ -136,72 +136,67 @@
             </div>
         </div>
         <hr>
+
         <section class="ranking container my-5">
             <div class="text-center mb-5">
                 <h2 class="titulo-ranking">🏆 Alunos em Destaque</h2>
-                <p class="subtitulo-ranking">
-                    Conheça os estudantes que se destacaram em cada idioma!
-                </p>
+                <p class="subtitulo-ranking">Confira os alunos que mais se destacaram em cada curso!</p>
             </div>
 
-            <div class="row g-4">
-
-                <!-- RANKING INGLÊS -->
-                <div class="col-lg-6">
-                    <div class="card card-ranking h-100">
-                        <div class="card-header ranking-ingles">
+            <div class="tab-content" id="rankingConteudo">
+                <div class="tab-pane fade show active" id="painelIngles" role="tabpanel">
+                    <div class="podio-ranking">
+                        <div class="text-center mb-4">
                             <h3>🇬🇧 Inglês</h3>
+                            <p>Alunos em destaque</p>
                         </div>
-                        <div class="card-body">
-                            <div id="rankingIngles" class="lista-ranking">
-                                <p class="text-center">Carregando alunos...</p>
-                            </div>
-                        </div>
+                        <div id="rankingIngles" class="lista-ranking"></div>
                     </div>
                 </div>
 
-                <!-- RANKING ESPANHOL -->
-                <div class="col-lg-6">
-                    <div class="card card-ranking h-100">
-                        <div class="card-header ranking-espanhol">
+                <div class="tab-pane fade" id="painelEspanhol" role="tabpanel">
+                    <div class="podio-ranking">
+                        <div class="text-center mb-4">
                             <h3>🇪🇸 Espanhol</h3>
+                            <p>Alunos em destaque</p>
                         </div>
-                        <div class="card-body">
-                            <div id="rankingEspanhol" class="lista-ranking">
-                                <p class="text-center">Carregando alunos...</p>
-                            </div>
-                        </div>
+                        <div id="rankingEspanhol" class="lista-ranking"></div>
                     </div>
                 </div>
 
-                <!-- RANKING FRANCÊS -->
-                <div class="col-lg-6">
-                    <div class="card card-ranking h-100">
-                        <div class="card-header ranking-frances">
+                <div class="tab-pane fade" id="painelFrances" role="tabpanel">
+                    <div class="podio-ranking">
+                        <div class="text-center mb-4">
                             <h3>🇫🇷 Francês</h3>
+                            <p>Alunos em destaque</p>
                         </div>
-                        <div class="card-body">
-                            <div id="rankingFrances" class="lista-ranking">
-                                <p class="text-center">Carregando alunos...</p>
-                            </div>
-                        </div>
+                        <div id="rankingFrances" class="lista-ranking"></div>
                     </div>
                 </div>
 
-                <!-- RANKING JAPONÊS -->
-                <div class="col-lg-6">
-                    <div class="card card-ranking h-100">
-                        <div class="card-header ranking-japones">
+                <div class="tab-pane fade" id="painelJapones" role="tabpanel">
+                    <div class="podio-ranking">
+                        <div class="text-center mb-4">
                             <h3>🇯🇵 Japonês</h3>
+                            <p>Alunos em destaque</p>
                         </div>
-                        <div class="card-body">
-                            <div id="rankingJapones" class="lista-ranking">
-                                <p class="text-center">Carregando alunos...</p>
-                            </div>
-                        </div>
+                        <div id="rankingJapones" class="lista-ranking"></div>
                     </div>
                 </div>
+            </div>
 
+            <div class="seletor-cursos mt-5">
+                <p class="text-center mb-3">Selecione um curso</p>
+                <div class="d-flex justify-content-center flex-wrap gap-2" id="rankingCursos" role="tablist">
+                    <button class="btn btn-outline-primary active" id="cursoIngles" data-bs-toggle="tab"
+                        data-bs-target="#painelIngles" type="button" role="tab">🇬🇧 Inglês</button>
+                    <button class="btn btn-outline-warning" id="cursoEspanhol" data-bs-toggle="tab"
+                        data-bs-target="#painelEspanhol" type="button" role="tab">🇪🇸 Espanhol</button>
+                    <button class="btn btn-outline-info" id="cursoFrances" data-bs-toggle="tab"
+                        data-bs-target="#painelFrances" type="button" role="tab">🇫🇷 Francês</button>
+                    <button class="btn btn-outline-dark" id="cursoJapones" data-bs-toggle="tab"
+                        data-bs-target="#painelJapones" type="button" role="tab">🇯🇵 Japonês</button>
+                </div>
             </div>
         </section>
     </main>
