@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -26,11 +28,14 @@
 
         <ul class="nav nav-tabs justify-content-center mb-4" id="abasProfessor" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="abaNotas" data-bs-toggle="tab" data-bs-target="#notas" type="button" role="tab">Notas</button>
+                <button class="nav-link active" id="abaNotas" data-bs-toggle="tab" data-bs-target="#notas" type="button"
+                    role="tab">Notas</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="abaFrequencia" data-bs-toggle="tab" data-bs-target="#frequencia" type="button" role="tab">Frequência</button>
+                <button class="nav-link" id="abaFrequencia" data-bs-toggle="tab" data-bs-target="#frequencia"
+                    type="button" role="tab">Frequência</button>
             </li>
+
         </ul>
 
         <div class="tab-content" id="conteudoProfessor">
@@ -65,7 +70,8 @@
                                 </thead>
                                 <tbody id="tabelaNotas">
                                     <tr>
-                                        <td colspan="6" class="text-muted">Selecione um curso para visualizar os alunos.</td>
+                                        <td colspan="6" class="text-muted">Selecione um curso para visualizar os alunos.
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -108,7 +114,8 @@
                                 </thead>
                                 <tbody id="tabelaFrequencia">
                                     <tr>
-                                        <td colspan="4" class="text-muted">Selecione um curso para visualizar os alunos.</td>
+                                        <td colspan="4" class="text-muted">Selecione um curso para visualizar os alunos.
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -121,6 +128,73 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="tab-pane fade" id="ranking" role="tabpanel">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h4 class="text-center mb-4">
+                            Ranking dos Alunos
+                        </h4>
+
+                        <div class="row mb-4">
+
+                            <div class="col-md-6">
+
+                                <label for="cursoRanking" class="form-label fw-bold">
+                                    Curso
+                                </label>
+
+                                <select class="form-select" id="cursoRanking">
+
+                                    <option value="">Selecione um curso</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="Espanhol">Espanhol</option>
+                                    <option value="Francês">Francês</option>
+                                    <option value="Japonês">Japonês</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-hover align-middle text-center">
+
+                                <thead class="table-dark">
+
+                                    <tr>
+                                        <th>Posição</th>
+                                        <th>Aluno</th>
+                                        <th>Curso</th>
+                                        <th>Média</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="tabelaRanking">
+
+                                    <tr>
+                                        <td colspan="4" class="text-muted">
+                                            Selecione um curso para visualizar o ranking.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -152,4 +226,5 @@
     <script src="JS/bootstrap.js"></script>
     <script src="JS/professor.js"></script>
 </body>
+
 </html>
