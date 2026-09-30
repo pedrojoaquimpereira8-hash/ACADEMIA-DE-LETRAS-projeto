@@ -7,16 +7,16 @@
     <title>ACADEMIA-LETRAS</title>
     <link rel="stylesheet" href="CSS/bootstrap.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Academia Letras</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,8 +38,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"
-                        placeholder="Pesquisar" aria-label="Pesquisar">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                     <button class="btn btn-outline-success" type="submit">
                         Pesquisar
                     </button>
@@ -66,13 +65,8 @@
                                 mercado de trabalho ou viajar com confiança, nosso método eficaz
                                 oferece todo o suporte necessário.
                             </p>
-                            <button
-                                class="btn btn-primary btn-curso"
-                                data-curso="Inglês"
-                                data-preco="R$ 89,90/mês"
-                                id="c1"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalCurso">
+                            <button class="btn btn-primary btn-curso" data-curso="Inglês" data-preco="R$ 89,90/mês"
+                                id="c1" data-bs-toggle="modal" data-bs-target="#modalCurso">
                                 Participe Aqui!
                             </button>
                         </div>
@@ -91,13 +85,8 @@
                                 para oferecer uma experiência envolvente e prática, com foco na
                                 conversação desde o primeiro dia.
                             </p>
-                            <button
-                                class="btn btn-primary btn-curso"
-                                data-curso="Espanhol"
-                                data-preco="R$ 79,90/mês"
-                                id="c2"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalCurso">
+                            <button class="btn btn-primary btn-curso" data-curso="Espanhol" data-preco="R$ 79,90/mês"
+                                id="c2" data-bs-toggle="modal" data-bs-target="#modalCurso">
                                 Participe Aqui!
                             </button>
                         </div>
@@ -105,7 +94,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="imagens/French64.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Curso: Fluência no Francês
@@ -117,13 +106,8 @@
                                 permitindo que você se torne fluente e seguro para se expressar com
                                 a precisão única da língua.
                             </p>
-                            <button
-                                class="btn btn-primary btn-curso"
-                                data-curso="Francês"
-                                data-preco="R$ 64,90/mês"
-                                id="c3"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalCurso">
+                            <button class="btn btn-primary btn-curso" data-curso="Francês" data-preco="R$ 64,90/mês"
+                                id="c3" data-bs-toggle="modal" data-bs-target="#modalCurso">
                                 Participe Aqui!
                             </button>
                         </div>
@@ -131,7 +115,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="imagens/Japanese64.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Curso: Fluência no Japonês
@@ -142,13 +126,8 @@
                                 exercícios práticos, as aulas preparam os alunos para se expressarem
                                 com a exatidão e fluência características do idioma japonês.
                             </p>
-                            <button
-                                class="btn btn-primary btn-curso"
-                                data-curso="Japonês"
-                                data-preco="R$ 69,90/mês"
-                                id="c4"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalCurso">
+                            <button class="btn btn-primary btn-curso" data-curso="Japonês" data-preco="R$ 69,90/mês"
+                                id="c4" data-bs-toggle="modal" data-bs-target="#modalCurso">
                                 Participe Aqui!
                             </button>
                         </div>
@@ -156,6 +135,75 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <section class="ranking container my-5">
+            <div class="text-center mb-5">
+                <h2 class="titulo-ranking">🏆 Alunos em Destaque</h2>
+                <p class="subtitulo-ranking">
+                    Conheça os estudantes que se destacaram em cada idioma!
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- RANKING INGLÊS -->
+                <div class="col-lg-6">
+                    <div class="card card-ranking h-100">
+                        <div class="card-header ranking-ingles">
+                            <h3>🇬🇧 Inglês</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="rankingIngles" class="lista-ranking">
+                                <p class="text-center">Carregando alunos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RANKING ESPANHOL -->
+                <div class="col-lg-6">
+                    <div class="card card-ranking h-100">
+                        <div class="card-header ranking-espanhol">
+                            <h3>🇪🇸 Espanhol</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="rankingEspanhol" class="lista-ranking">
+                                <p class="text-center">Carregando alunos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RANKING FRANCÊS -->
+                <div class="col-lg-6">
+                    <div class="card card-ranking h-100">
+                        <div class="card-header ranking-frances">
+                            <h3>🇫🇷 Francês</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="rankingFrances" class="lista-ranking">
+                                <p class="text-center">Carregando alunos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RANKING JAPONÊS -->
+                <div class="col-lg-6">
+                    <div class="card card-ranking h-100">
+                        <div class="card-header ranking-japones">
+                            <h3>🇯🇵 Japonês</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="rankingJapones" class="lista-ranking">
+                                <p class="text-center">Carregando alunos...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
     <!-- MODAL 1 - INFORMAÇÕES DO CURSO -->
     <div class="modal fade" id="modalCurso" tabindex="-1">
@@ -168,13 +216,18 @@
                     <h2 id="nomeCurso" class="titulo-plano">Curso de Inglês</h2>
                     <h1 id="precoCurso" class="preco-plano">R$ 89,90/mês</h1>
                     <p class="texto-plano">Acesso ilimitado ao curso escolhido • Material incluso</p>
-                    <button type="button" class="btn btn-plano mt-3 mb-4" id="btnFazerMatricula">Fazer Matrícula</button>
+                    <button type="button" class="btn btn-plano mt-3 mb-4" id="btnFazerMatricula">Fazer
+                        Matrícula</button>
                     <hr class="linha-plano">
                     <div class="beneficios text-start mt-4">
-                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Aulas completas do idioma escolhido.</p>
-                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Material didático digital incluso.</p>
-                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Exercícios de conversação, leitura e escrita.</p>
-                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Professores especializados e certificado ao final.</p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Aulas completas do idioma escolhido.
+                        </p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Material didático digital incluso.
+                        </p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Exercícios de conversação, leitura e
+                            escrita.</p>
+                        <p class="beneficio"><i class="bi bi-check-circle-fill"></i>Professores especializados e
+                            certificado ao final.</p>
                     </div>
                 </div>
             </div>
@@ -196,7 +249,8 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">CPF</label>
-                            <input type="text" class="form-control campo-linha" name="cpfAluno" id="cpfAluno" maxlength="14">
+                            <input type="text" class="form-control campo-linha" name="cpfAluno" id="cpfAluno"
+                                maxlength="14">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">E-mail</label>
@@ -204,14 +258,17 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Telefone</label>
-                            <input type="tel" class="form-control campo-linha" name="telefoneAluno" id="telefoneAluno" maxlength="15">
+                            <input type="tel" class="form-control campo-linha" name="telefoneAluno" id="telefoneAluno"
+                                maxlength="15">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Curso</label>
-                            <input type="text" class="form-control campo-linha" id="cursoAluno" name="cursoAluno" readonly>
+                            <input type="text" class="form-control campo-linha" id="cursoAluno" name="cursoAluno"
+                                readonly>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success" id="finalizarCadastro">Finalizar Cadastro</button>
+                            <button type="submit" class="btn btn-success" id="finalizarCadastro">Finalizar
+                                Cadastro</button>
                         </div>
                     </form>
                 </div>
@@ -239,6 +296,7 @@
     <!-- SCRIPTS -->
     <script src="JS/bootstrap.js"></script>
     <script src="JS/script.js"></script>
+    <script src="JS/ranking.js"></script>
 </body>
 
 </html>

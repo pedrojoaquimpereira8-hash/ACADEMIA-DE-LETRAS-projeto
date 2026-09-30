@@ -315,6 +315,8 @@ btnSalvarNotas.addEventListener("click", function () {
 
 });
 
+
+
 btnLimparAlunos.addEventListener("click", () => {
     const confirmar = confirm("Tem certeza que deseja apagar todos os alunos cadastrados?");
 

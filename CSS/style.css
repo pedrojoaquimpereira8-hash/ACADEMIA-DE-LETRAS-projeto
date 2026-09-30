@@ -267,3 +267,96 @@
     display: flex;
     flex-direction: row;
 }
+
+/* SEÇÃO DE RANKING */
+
+.titulo-ranking {
+    font-weight: 700;
+    color: var(--ddl-rosa);
+}
+
+.subtitulo-ranking {
+    color: var(--ddl-texto);
+    font-size: 1.1rem;
+}
+
+.card-ranking {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-ranking .card-header {
+    text-align: center;
+    padding: 18px;
+    border: none;
+}
+
+.card-ranking .card-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.ranking-ingles {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.ranking-espanhol {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.ranking-frances {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.ranking-japones {
+    background-color: #fce7f3;
+    color: #9d174d;
+}
+
+.item-ranking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+}
+
+.item-ranking:last-child {
+    border-bottom: none;
+}
+
+.posicao-ranking {
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.info-aluno-ranking {
+    flex: 1;
+    min-width: 0;
+}
+
+.nome-aluno-ranking {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.media-ranking {
+    font-weight: 700;
+    color: var(--ddl-rosa);
+    white-space: nowrap;
+}
+
+.sem-alunos {
+    text-align: center;
+    color: #777;
+    padding: 20px 0;
+}
