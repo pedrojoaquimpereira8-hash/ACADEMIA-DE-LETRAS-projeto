@@ -8,7 +8,25 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f8fa;
+    color: #222;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 14px 5%;
+}
+
+.navbar-brand {
+    font-family: "DynaPuff", cursive;
+    font-size: 1.6rem;
+}
+
 /* Toast */
+
 .toast-container {
     z-index: 9999;
     bottom: 24px;
@@ -19,11 +37,9 @@
     max-width: 420px;
     padding: 8px;
     border-radius: 18px;
-
     color: white;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-
     box-shadow: 0 12px 30px rgba(0, 0, 0, .20);
     transition: all .25s ease;
 }
@@ -64,7 +80,6 @@
     box-shadow: none !important;
     background-color: transparent !important;
     transition: border-color 0.2s, border-width 0.2s;
-
 }
 
 .campo-linha:focus {
@@ -233,6 +248,8 @@
     color: black;
 }
 
+/* Layout */
+
 .containerQ2 {
     display: flex;
     flex-direction: row;
@@ -243,24 +260,19 @@
     flex-direction: column !important;
 }
 
-.q2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    margin: 0 auto;
-}
-
+.q2,
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .ranking {
     align-items: center;
+    max-width: 1100px;
 }
 
 .ranking-container {
@@ -268,95 +280,396 @@
     flex-direction: row;
 }
 
+/* Cards */
+
+.card {
+    border: none;
+    border-radius: 18px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Títulos */
+
+.q2 h1,
+.main h1 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+}
+
 /* SEÇÃO DE RANKING */
 
 .titulo-ranking {
-    font-weight: 700;
-    color: var(--ddl-rosa);
+    font-family: "Nunito", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #202020;
+    margin-bottom: 8px;
 }
 
 .subtitulo-ranking {
-    color: var(--ddl-texto);
-    font-size: 1.1rem;
+    color: #6b7280;
+    font-size: 1rem;
 }
 
-.card-ranking {
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+.podio-ranking {
+    background: #fff;
+    border-radius: 24px;
+    padding: 35px 30px;
+    min-height: 350px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .07);
 }
 
-.card-ranking .card-header {
-    text-align: center;
-    padding: 18px;
-    border: none;
+.podio-ranking h3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 4px;
 }
 
-.card-ranking .card-header h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 700;
+.podio-ranking p {
+    color: #777;
 }
 
-.ranking-ingles {
-    background-color: #dbeafe;
-    color: #1e40af;
-}
-
-.ranking-espanhol {
-    background-color: #fee2e2;
-    color: #991b1b;
-}
-
-.ranking-frances {
-    background-color: #e0e7ff;
-    color: #3730a3;
-}
-
-.ranking-japones {
-    background-color: #fce7f3;
-    color: #9d174d;
+.lista-ranking {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 18px;
+    min-height: 190px;
+    padding-top: 20px;
 }
 
 .item-ranking {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    gap: 10px;
+    justify-content: flex-start;
+    width: 30%;
+    min-height: 155px;
+    padding: 18px 12px;
+    border: none;
+    border-radius: 18px 18px 8px 8px;
+    background: #f4f5f7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    text-align: center;
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.item-ranking:last-child {
-    border-bottom: none;
+.item-ranking:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
 }
 
 .posicao-ranking {
-    font-size: 1.4rem;
-    font-weight: bold;
-    min-width: 40px;
-    text-align: center;
+    font-size: 2rem;
+    min-width: auto;
+    margin-bottom: 8px;
 }
 
 .info-aluno-ranking {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
 }
 
 .nome-aluno-ranking {
-    font-weight: 600;
+    font-size: .95rem;
+    font-weight: 700;
     overflow-wrap: anywhere;
+    margin-bottom: 3px;
+}
+
+.info-aluno-ranking small {
+    color: #777;
 }
 
 .media-ranking {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #222;
+}
+
+.item-ranking:nth-child(1) {
+    order: 2;
+    min-height: 190px;
+    background: #fff7d6;
+    border-top: 5px solid #e5b800;
+}
+
+.item-ranking:nth-child(2) {
+    order: 1;
+    min-height: 160px;
+    background: #f0f1f3;
+    border-top: 5px solid #9aa0a6;
+}
+
+.item-ranking:nth-child(3) {
+    order: 3;
+    min-height: 145px;
+    background: #fff0e3;
+    border-top: 5px solid #c9854d;
+}
+
+
+.seletor-cursos {
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .06);
+}
+
+.seletor-cursos p {
     font-weight: 700;
-    color: var(--ddl-rosa);
-    white-space: nowrap;
+    color: #444;
+}
+
+.seletor-cursos .btn {
+    border-radius: 30px;
+    padding: 9px 20px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.seletor-cursos .btn:hover {
+    transform: translateY(-2px);
 }
 
 .sem-alunos {
+    width: 100%;
     text-align: center;
     color: #777;
-    padding: 20px 0;
+    padding: 40px 0;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 4%;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .q2,
+    .main {
+        width: 94%;
+    }
+
+    .titulo-ranking {
+        font-size: 2rem;
+    }
+
+    .podio-ranking {
+        padding: 25px 15px;
+    }
+
+    .lista-ranking {
+        gap: 8px;
+    }
+
+    .item-ranking {
+        width: 32%;
+        padding: 14px 7px;
+    }
+
+    .nome-aluno-ranking {
+        font-size: .8rem;
+    }
+
+    .media-ranking {
+        font-size: 1rem;
+    }
+
+    .posicao-ranking {
+        font-size: 1.6rem;
+    }
+
+    .seletor-cursos .btn {
+        flex: 1 1 40%;
+    }
+}
+
+
+.curso-card {
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+
+.imagem-curso {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.imagem-curso img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    transition: transform .4s ease, filter .4s ease;
+}
+
+.curso-card:hover .imagem-curso img {
+    transform: scale(1.08);
+    filter: brightness(.9);
+}
+
+.curso-card .card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.curso-card .card-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.curso-card .card-text {
+    color: #6b7280;
+    font-size: .92rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+
+.preco-card {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.preco-card span {
+    color: #777;
+    font-size: .75rem;
+}
+
+.preco-card strong {
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.preco-card small {
+    color: #777;
+}
+
+
+.curso-card .btn-curso {
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 50px;
+    border: 2px solid;
+    background: transparent;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.curso-card .btn-curso:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.curso-ingles .card-title,
+.curso-ingles .preco-card strong {
+    color: #E53935;
+}
+
+.curso-ingles .btn-curso {
+    border-color: #E53935;
+    color: #E53935;
+}
+
+.curso-ingles .btn-curso:hover {
+    background-color: #E53935;
+    color: white;
+}
+
+
+
+.curso-espanhol .card-title,
+.curso-espanhol .preco-card strong {
+    color: #d99d00;
+}
+
+.curso-espanhol .btn-curso {
+    border-color: #d99d00;
+    color: #d99d00;
+}
+
+.curso-espanhol .btn-curso:hover {
+    background-color: #d99d00;
+    color: white;
+}
+
+
+
+.curso-frances .card-title,
+.curso-frances .preco-card strong {
+    color: #2979FF;
+}
+
+.curso-frances .btn-curso {
+    border-color: #2979FF;
+    color: #2979FF;
+}
+
+.curso-frances .btn-curso:hover {
+    background-color: #2979FF;
+    color: white;
+}
+
+
+
+.curso-japones .card-title,
+.curso-japones .preco-card strong {
+    color: #222;
+}
+
+.curso-japones .btn-curso {
+    border-color: #222;
+    color: #222;
+}
+
+.curso-japones .btn-curso:hover {
+    background-color: #222;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+
+    .imagem-curso {
+        height: 190px;
+    }
+
+    .curso-card .card-body {
+        padding: 20px;
+    }
+
+    .curso-card .card-title {
+        font-size: 1.3rem;
+    }
+
 }

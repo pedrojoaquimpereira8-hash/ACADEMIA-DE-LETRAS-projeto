@@ -1,12 +1,9 @@
-const formLoginProfessor = document.getElementById("formLoginProfessor");
-const cpfProfessor = document.getElementById("cpfProfessor");
-const senhaProfessor = document.getElementById("senhaProfessor");
+const formLoginAluno = document.getElementById("formLoginAluno");
+const nomeAlunoLogin = document.getElementById("nomeAlunoLogin");
+const cpfAlunoLogin = document.getElementById("cpfAlunoLogin");
 
-const cpfProfessorCadastrado = "12345678900";
-const senhaProfessorCadastrada = "1234";
-
-cpfProfessor.addEventListener("input", () => {
-    let valor = cpfProfessor.value.replace(/\D/g, "");
+cpfAlunoLogin.addEventListener("input", () => {
+    let valor = cpfAlunoLogin.value.replace(/\D/g, "");
     valor = valor.substring(0, 11);
 
     if (valor.length > 9) {
@@ -17,26 +14,39 @@ cpfProfessor.addEventListener("input", () => {
         valor = valor.replace(/(\d{3})(\d+)/, "$1.$2");
     }
 
-    cpfProfessor.value = valor;
+    cpfAlunoLogin.value = valor;
 });
 
-formLoginProfessor.addEventListener("submit", (event) => {
+formLoginAluno.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const cpf = cpfProfessor.value.replace(/\D/g, "");
-    const senha = senhaProfessor.value;
+    const nome = nomeAlunoLogin.value.trim();
+    const cpf = cpfAlunoLogin.value.replace(/\D/g, "");
 
-    if (cpf === "" || senha === "") {
+    if (nome === "" || cpf === "") {
         mostrarToast("Preencha todos os campos.", "warning");
         return;
     }
 
-    if (cpf === cpfProfessorCadastrado && senha === senhaProfessorCadastrada) {
-        window.location.href = "professor.html";
+    if (cpf.length !== 11) {
+        mostrarToast("Digite um CPF válido.", "warning");
         return;
     }
 
-    mostrarToast("CPF ou senha incorretos.", "error");
+    const alunos = JSON.parse(localStorage.getItem("alunos")) || [];
+
+    const alunoEncontrado = alunos.find(aluno =>
+        aluno.cpf === cpf &&
+        aluno.nome.toLowerCase() === nome.toLowerCase()
+    );
+
+    if (!alunoEncontrado) {
+        mostrarToast("Aluno não encontrado. Verifique o nome e o CPF.", "error");
+        return;
+    }
+
+    sessionStorage.setItem("cpfAlunoLogado", alunoEncontrado.cpf);
+    window.location.href = "aluno.html";
 });
 
 function mostrarToast(mensagem, tipo = "success") {
@@ -72,4 +82,3 @@ function mostrarToast(mensagem, tipo = "success") {
     const toast = bootstrap.Toast.getOrCreateInstance(toastElemento, { delay: 3500 });
     toast.show();
 }
-

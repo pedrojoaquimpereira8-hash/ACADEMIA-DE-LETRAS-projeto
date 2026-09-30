@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Desempenho - Academia Letras</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Academia Letras</a>
+            <button class="btn btn-outline-light" id="btnSairAluno">Sair</button>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+
+        <div class="text-center mb-5">
+            <i class="bi bi-person-circle fs-1"></i>
+            <h1 class="mt-2">Meu Desempenho</h1>
+            <p class="text-muted">Acompanhe suas notas e sua frequência.</p>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body text-center">
+                <h2 id="nomeAluno" class="h3 mb-2">Aluno</h2>
+                <p class="mb-1"><strong>Curso:</strong> <span id="cursoAluno">-</span></p>
+                <p class="mb-0"><strong>CPF:</strong> <span id="cpfAluno">-</span></p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="bi bi-journal-text fs-2"></i>
+                    <h2 class="h4 mt-2">Minhas Notas</h2>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Mar/Abr</th>
+                                <th>Mai/Jun</th>
+                                <th>Ago/Set</th>
+                                <th>Out/Nov</th>
+                                <th>Média</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="notaMarAbr">0,0</td>
+                                <td id="notaMaiJun">0,0</td>
+                                <td id="notaAgoSet">0,0</td>
+                                <td id="notaOutNov">0,0</td>
+                                <td id="mediaAluno" class="fw-bold">0,0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="bi bi-calendar-check fs-2"></i>
+                    <h2 class="h4 mt-2">Minha Frequência</h2>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="border rounded p-3">
+                            <h3 id="presencasAluno" class="h4">0</h3>
+                            <p class="mb-0 text-muted">Presenças</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="border rounded p-3">
+                            <h3 id="faltasAluno" class="h4">0</h3>
+                            <p class="mb-0 text-muted">Faltas</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="border rounded p-3">
+                            <h3 id="frequenciaAluno" class="h4">0,0%</h3>
+                            <p class="mb-0 text-muted">Frequência</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-trophy fs-2"></i>
+                <h2 class="h4 mt-2">Ranking</h2>
+                <p id="posicaoRanking" class="mb-0 text-muted">Carregando posição no ranking...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+        <div id="toastDonna" class="toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex align-items-center p-2">
+                <i id="toastIcon" class="bi fs-3 me-3"></i>
+                <div class="flex-grow-1">
+                    <div id="toastTitle" class="fw-bold"></div>
+                    <div id="toastBody"></div>
+                </div>
+                <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/aluno.js"></script>
+</body>
+
+</html>

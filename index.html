@@ -34,107 +34,90 @@
                         <a class="nav-link" href="login-professor.html">Área dos Professores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="login-aluno.html">Área do Aluno</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                    <button class="btn btn-outline-success" type="submit">
-                        Pesquisar
-                    </button>
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
             </div>
         </div>
     </nav>
+
     <main>
         <div class="container mt-5">
-            <h1 class="text-center mb-5">
-                Conheça nossos Planos:
-            </h1>
+            <h1 class="text-center mb-5">Conheça nossos Planos:</h1>
+
             <div class="row g-4">
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                    <div class="card h-100 curso-card curso-ingles">
+                        <div class="imagem-curso">
+                            <img src="imagens/en.png" class="card-img-top" alt="Curso de Inglês">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Curso: Fluência no Inglês
-                            </h5>
-                            <p class="card-text">
-                                Aprender inglês pode parecer um desafio, mas conosco, você alcança
-                                fluência de maneira rápida e natural. Seja para se destacar no
-                                mercado de trabalho ou viajar com confiança, nosso método eficaz
-                                oferece todo o suporte necessário.
-                            </p>
-                            <button class="btn btn-primary btn-curso" data-curso="Inglês" data-preco="R$ 89,90/mês"
-                                id="c1" data-bs-toggle="modal" data-bs-target="#modalCurso">
-                                Participe Aqui!
-                            </button>
+                            <h5 class="card-title">Curso: Fluência no Inglês</h5>
+                            <p class="card-text">Aprender inglês pode parecer um desafio, mas conosco, você alcança
+                                fluência de maneira rápida e natural. Seja para se destacar no mercado de trabalho ou
+                                viajar com confiança, nosso método eficaz oferece todo o suporte necessário.</p>
+                            <button class="btn btn-curso" data-curso="Inglês" data-preco="R$ 89,90/mês" id="c1"
+                                data-bs-toggle="modal" data-bs-target="#modalCurso">Participe Aqui!</button>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                    <div class="card h-100 curso-card curso-espanhol">
+                        <div class="imagem-curso">
+                            <img src="imagens/sp.png" class="card-img-top" alt="Curso de Espanhol">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Curso: Fluência no Espanhol
-                            </h5>
-                            <p class="card-text">
-                                Aprender espanhol abre as portas para um mundo cheio de cultura,
-                                história e novas possibilidades. Nosso curso de espanhol é pensado
-                                para oferecer uma experiência envolvente e prática, com foco na
-                                conversação desde o primeiro dia.
-                            </p>
-                            <button class="btn btn-primary btn-curso" data-curso="Espanhol" data-preco="R$ 79,90/mês"
-                                id="c2" data-bs-toggle="modal" data-bs-target="#modalCurso">
-                                Participe Aqui!
-                            </button>
+                            <h5 class="card-title">Curso: Fluência no Espanhol</h5>
+                            <p class="card-text">Aprender espanhol abre as portas para um mundo cheio de cultura,
+                                história e novas possibilidades. Nosso curso de espanhol é pensado para oferecer uma
+                                experiência envolvente e prática, com foco na conversação desde o primeiro dia.</p>
+                            <button class="btn btn-curso" data-curso="Espanhol" data-preco="R$ 79,90/mês" id="c2"
+                                data-bs-toggle="modal" data-bs-target="#modalCurso">Participe Aqui!</button>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="card h-100">
-                        <img src="imagens/French64.png" class="card-img-top" alt="...">
+                    <div class="card h-100 curso-card curso-frances">
+                        <div class="imagem-curso">
+                            <img src="imagens/fr.png" class="card-img-top" alt="Curso de Francês">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Curso: Fluência no Francês
-                            </h5>
-                            <p class="card-text">
-                                O francês não é apenas uma língua, é um patrimônio cultural vibrante,
-                                repleto de história e arte. Aprender francês na nossa Academia de
-                                Idiomas é embarcar em uma jornada que mistura tradição e inovação,
-                                permitindo que você se torne fluente e seguro para se expressar com
-                                a precisão única da língua.
-                            </p>
-                            <button class="btn btn-primary btn-curso" data-curso="Francês" data-preco="R$ 64,90/mês"
-                                id="c3" data-bs-toggle="modal" data-bs-target="#modalCurso">
-                                Participe Aqui!
-                            </button>
+                            <h5 class="card-title">Curso: Fluência no Francês</h5>
+                            <p class="card-text">O francês não é apenas uma língua, é um patrimônio cultural vibrante,
+                                repleto de história e arte. Aprender francês na nossa Academia de Idiomas é embarcar em
+                                uma jornada que mistura tradição e inovação, permitindo que você se torne fluente e
+                                seguro para se expressar com a precisão única da língua.</p>
+                            <button class="btn btn-curso" data-curso="Francês" data-preco="R$ 64,90/mês" id="c3"
+                                data-bs-toggle="modal" data-bs-target="#modalCurso">Participe Aqui!</button>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="card h-100">
-                        <img src="imagens/Japanese64.png" class="card-img-top" alt="...">
+                    <div class="card h-100 curso-card curso-japones">
+                        <div class="imagem-curso">
+                            <img src="imagens/jp.png" class="card-img-top" alt="Curso de Japonês">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Curso: Fluência no Japonês
-                            </h5>
-                            <p class="card-text">
-                                Nossa Academia oferece uma experiência completa de imersão na
-                                língua, cultura e história do Japão. Com foco em conversação e
-                                exercícios práticos, as aulas preparam os alunos para se expressarem
-                                com a exatidão e fluência características do idioma japonês.
-                            </p>
-                            <button class="btn btn-primary btn-curso" data-curso="Japonês" data-preco="R$ 69,90/mês"
-                                id="c4" data-bs-toggle="modal" data-bs-target="#modalCurso">
-                                Participe Aqui!
-                            </button>
+                            <h5 class="card-title">Curso: Fluência no Japonês</h5>
+                            <p class="card-text">Nossa Academia oferece uma experiência completa de imersão na língua,
+                                cultura e história do Japão. Com foco em conversação e exercícios práticos, as aulas
+                                preparam os alunos para se expressarem com a exatidão e fluência características do
+                                idioma japonês.</p>
+                            <button class="btn btn-curso" data-curso="Japonês" data-preco="R$ 69,90/mês" id="c4"
+                                data-bs-toggle="modal" data-bs-target="#modalCurso">Participe Aqui!</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <hr>
 
         <section class="ranking container my-5">
@@ -200,6 +183,7 @@
             </div>
         </section>
     </main>
+
     <!-- MODAL 1 - INFORMAÇÕES DO CURSO -->
     <div class="modal fade" id="modalCurso" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -270,11 +254,13 @@
             </div>
         </div>
     </div>
+
     <!-- FOOTER -->
     <footer class="text-center mt-5 mb-3">
         © 2026 MJ Academia de Idiomas LTDA.
         Todos os direitos reservados.
     </footer>
+
     <!-- TOAST -->
     <div class="toast-container position-fixed bottom-0 end-0 p-4">
         <div id="toastDonna" class="toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -288,6 +274,7 @@
             </div>
         </div>
     </div>
+
     <!-- SCRIPTS -->
     <script src="JS/bootstrap.js"></script>
     <script src="JS/script.js"></script>
