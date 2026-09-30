@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor - Academia Letras</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Academia Letras</a>
+            <button class="btn btn-outline-light" id="btnSair">Sair</button>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-4">
+            <i class="bi bi-person-badge fs-1"></i>
+            <h1 class="mt-2">Painel do Professor</h1>
+            <p class="text-muted">Gerencie as notas e a frequência dos alunos.</p>
+        </div>
+
+        <ul class="nav nav-tabs justify-content-center mb-4" id="abasProfessor" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="abaNotas" data-bs-toggle="tab" data-bs-target="#notas" type="button" role="tab">Notas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="abaFrequencia" data-bs-toggle="tab" data-bs-target="#frequencia" type="button" role="tab">Frequência</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="conteudoProfessor">
+
+            <div class="tab-pane fade show active" id="notas" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row align-items-end mb-4">
+                            <div class="col-md-6">
+                                <label for="cursoNotas" class="form-label fw-bold">Curso</label>
+                                <select class="form-select" id="cursoNotas">
+                                    <option value="">Selecione um curso</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="Espanhol">Espanhol</option>
+                                    <option value="Francês">Francês</option>
+                                    <option value="Japonês">Japonês</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover align-middle text-center">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Aluno</th>
+                                        <th>Mar/Abr</th>
+                                        <th>Mai/Jun</th>
+                                        <th>Ago/Set</th>
+                                        <th>Out/Nov</th>
+                                        <th>Média</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaNotas">
+                                    <tr>
+                                        <td colspan="6" class="text-muted">Selecione um curso para visualizar os alunos.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <button type="button" class="btn btn-success" id="btnSalvarNotas">
+                                <i class="bi bi-check-lg"></i> Salvar alterações
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="frequencia" role="tabpanel">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row align-items-end mb-4">
+                            <div class="col-md-6">
+                                <label for="cursoFrequencia" class="form-label fw-bold">Curso</label>
+                                <select class="form-select" id="cursoFrequencia">
+                                    <option value="">Selecione um curso</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="Espanhol">Espanhol</option>
+                                    <option value="Francês">Francês</option>
+                                    <option value="Japonês">Japonês</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover align-middle text-center">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Aluno</th>
+                                        <th>Presenças</th>
+                                        <th>Faltas</th>
+                                        <th>Frequência</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaFrequencia">
+                                    <tr>
+                                        <td colspan="4" class="text-muted">Selecione um curso para visualizar os alunos.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <button type="button" class="btn btn-success" id="btnSalvarFrequencia">
+                                <i class="bi bi-check-lg"></i> Salvar alterações
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card shadow-sm mt-5 border-danger">
+            <div class="card-body text-center">
+                <h5 class="card-title text-danger">
+                    <i class="bi bi-exclamation-triangle"></i> Área de manutenção
+                </h5>
+                <p class="card-text">Use esta opção para apagar todos os alunos cadastrados no sistema.</p>
+                <button type="button" class="btn btn-danger" id="btnLimparAlunos">Limpar alunos cadastrados</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+        <div id="toastDonna" class="toast border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex align-items-center p-2">
+                <i id="toastIcon" class="bi fs-3 me-3"></i>
+                <div class="flex-grow-1">
+                    <div id="toastTitle" class="fw-bold"></div>
+                    <div id="toastBody"></div>
+                </div>
+                <button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/professor.js"></script>
+</body>
+</html>
